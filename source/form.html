@@ -54,24 +54,24 @@
           <legend class="visually-hidden">
             Введите данные питомца
           </legend>
-            <p class="form__item form__item--reverse">
-              <input class="form__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
-              <label class="form__label form__label--required" for="cat-name">
-                Имя:
-              </label>
-            </p>
-            <p class="form__item form__item--reverse">
-              <input class="form__input" id="cat-weight" type="number" name="cat-weight" placeholder="7" required>
-              <label class="form__label form__label--required" for="cat-weight">
-                Вес (кг):
-              </label>
-            </p>
-            <p class="form__item form__item--reverse">
-              <input class="form__input" id="cat-age" type="number" name="cat-age" placeholder="7">
-              <label class="form__label" for="cat-age">
-                Возраст (лет):
-              </label>
-            </p>
+          <p class="form__item">
+            <label class="form__label">
+              Имя:*
+              <input class="form__input" type="text" name="cat-name" placeholder="Барсик" required>
+            </label>
+          </p>
+          <p class="form__item">
+            <label class="form__label">
+              Вес (кг):*
+              <input class="form__input" type="number" name="cat-weight" placeholder="7" required>
+            </label>
+          </p>
+          <p class="form__item">
+            <label class="form__label">
+              Возраст (лет):
+              <input class="form__input" type="number" name="cat-age" placeholder="7">
+            </label>
+          </p>
         </fieldset>
         <fieldset class="selection-form__group radio-group separate">
           <legend class="visually-hidden">
@@ -79,13 +79,15 @@
           </legend>
           <ul class="form__list">
             <li class="form__item">
-              <input class="radio-group__input visually-hidden" id="slimming" type="radio" name="program" value="slimming" checked>
+              <input class="radio-group__input visually-hidden" id="slimming" type="radio" name="program"
+                value="slimming" checked>
               <label class="form__label radio-group__label" for="slimming">
                 Похудение
               </label>
             </li>
             <li class="form__item">
-              <input class="radio-group__input visually-hidden" id="weight-gain" type="radio" name="program" value="weight-gain">
+              <input class="radio-group__input visually-hidden" id="weight-gain" type="radio" name="program"
+                value="weight-gain">
               <label class="form__label radio-group__label" for="weight-gain">
                 Набор массы
               </label>
@@ -102,18 +104,18 @@
           <legend class="form__title">
             Контактные данные (владельца кота)
           </legend>
-            <p class="form__item form__item--reverse">
-              <input class="form__input form__input--email" id="email" type="email" name="client-email" placeholder="kuklachev@gmail.com" required>
-              <label class="form__label form__label--required form__label--email" for="email">
-                E-mail:
-              </label>
-            </p>
-            <p class="form__item form__item--reverse">
-              <input class="form__input form__input--phone" id="phone" type="tel" name="client-phone" placeholder="8 (960) 900-60-90" required>
-              <label class="form__label form__label--required form__label--phone" for="phone">
-                Телефон:
-              </label>
-            </p>
+          <p class="form__item form__item--reverse">
+            <label class="form__label">
+            E-mail:*
+            <input class="form__input form__input--email" type="email" name="client-email" placeholder="kuklachev@gmail.com" required>
+            </label>
+          </p>
+          <p class="form__item form__item--reverse">
+            <label class="form__label">
+              Телефон:*
+              <input class="form__input form__input--phone" type="tel" name="client-phone" placeholder="8 (960) 900-60-90" required>
+            </label>
+          </p>
           <label class="form__title" for="message">
             Комментарий
           </label>
@@ -125,13 +127,15 @@
           </legend>
           <ul class="form__list">
             <li class="form__item">
-              <input class="checkbox-group__input visually-hidden" id="sweetener" type="checkbox" name="extra" value="sweetener" checked>
+              <input class="checkbox-group__input visually-hidden" id="sweetener" type="checkbox" name="extra"
+                value="sweetener" checked>
               <label class="form__label checkbox-group__label" for="sweetener">
                 Сахарозаменитель
               </label>
             </li>
             <li class="form__item">
-              <input class="checkbox-group__input visually-hidden" id="water" type="checkbox" name="extra" value="water">
+              <input class="checkbox-group__input visually-hidden" id="water" type="checkbox" name="extra"
+                value="water">
               <label class="form__label checkbox-group__label" for="water">
                 Питьевая вода
               </label>
@@ -143,7 +147,8 @@
               </label>
             </li>
             <li class="form__item">
-              <input class="checkbox-group__input visually-hidden" id="vitamins" type="checkbox" name="extra" value="vitamins">
+              <input class="checkbox-group__input visually-hidden" id="vitamins" type="checkbox" name="extra"
+                value="vitamins">
               <label class="form__label checkbox-group__label" for="vitamins">
                 Витамины
               </label>
