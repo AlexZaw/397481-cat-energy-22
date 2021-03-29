@@ -51,7 +51,8 @@
       <form class="feedback__form selection-form" action="https://echo.htmlacademy.ru" method="post"
         name="feedback-form">
         <fieldset class="selection-form__group">
-          <ul class="selection-form__list" aria-label="Введите данные кота">
+          <legend class="visually-hidden">Введите данные питомца</legend>
+          <ul class="selection-form__list">
             <li class="selection-form__item selection-form__item--reverse">
               <input id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
               <label class="selection-form__label selection-form__label--required" for="cat-name">
@@ -73,7 +74,8 @@
           </ul>
         </fieldset>
         <fieldset class="selection-form__group separate">
-          <ul class="selection-form__list" aria-label="Выберите программу">
+          <legend class="visually-hidden">Выберите программу</legend>
+          <ul class="selection-form__list">
             <li class="selection-form__item">
               <input class="visually-hidden" id="slimming" type="radio" name="program" value="slimming" checked>
               <label class="selection-form__label selection-form__label--radio" for="slimming">
