@@ -1,30 +1,130 @@
 .icon {
-  --icon-color: hsl(97deg 53% 47%);
-  --icon-phone: url("../img/stack.svg#phone");
-  --icon-email: url("../img/stack.svg#email");
-
+  position: relative;
   display: inline-block;
-  vertical-align: baseline;
-  width: 80px;
-  height: 80px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
 }
 
-.icon:hover {
-  --icon-color: hsl(0deg 100% 75%);
-}
-
-.icon--type_use {
-  fill: var(--icon-color);
-}
-
-.icon--type_css {
+.icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  --icon-color: hsl(0deg 0% 0%);
+  --icon-phone: url("../../img/stack.svg#phone");
+  --icon-email: url("../../img/stack.svg#email");
+  --icon-cat-slim: url("../../img/stack.svg#cat-slim");
+  --icon-cat-pro: url("../../img/stack.svg#cat-pro");
+  --icon-alarm: url("../../img/stack.svg#icon-alarm");
+  --icon-eat: url("../../img/stack.svg#icon-eat");
+  --icon-leaf: url("../../img/stack.svg#icon-leaf");
+  --icon-tub: url("../../img/stack.svg#icon-tub");
+  --icon-vk: url("../../img/stack.svg#icon-vkontakte");
+  --icon-inst: url("../../img/stack.svg#icon-instagram");
+  --icon-fb: url("../../img/stack.svg#icon-facebook");
+  --icon-academy: url("../../img/stack.svg#academy");
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
   background-color: var(--icon-color);
 }
 
-.icon--pic_phone {
-  mask: var(--icon-phone);
+.icon--bg {
+  height: 60px;
+  width: 60px;
+  --bg-basic-h: 97deg;
+  --bg-basic-s: 53%;
+  --bg-basic-l: 47%;
+  --basic-o: 1;
+  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+  background-color: var(--bg-basic);
 }
 
-.icon--pic_email {
-  mask: var(--icon-email);
+.icon--bg-round {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.icon--phone::before {
+  width: 20px;
+  height: 20px;
+  mask-image: var(--icon-phone);
+}
+
+.icon--email::before {
+  width: 18px;
+  height: 13px;
+  mask-image: var(--icon-email);
+}
+
+.icon--cat-slim::before {
+  width: 36px;
+  height: 50px;
+  margin-top: -3px;
+  mask-image: var(--icon-cat-slim);
+}
+
+.icon--cat-pro::before {
+  width: 67px;
+  height: 28px;
+  mask-image: var(--icon-cat-pro);
+}
+
+.icon--alarm::before {
+  width: 32px;
+  height: 33px;
+  --icon-color: hsl(0deg 0% 100%);
+  mask-image: var(--icon-alarm);
+}
+
+.icon--eat::before {
+  width: 25px;
+  height: 30px;
+  --icon-color: hsl(0deg 0% 100%);
+  mask-image: var(--icon-eat);
+}
+
+.icon--leaf::before {
+  width: 30px;
+  height: 32px;
+  --icon-color: hsl(0deg 0% 100%);
+  mask-image: var(--icon-leaf);
+}
+
+.icon--tub::before {
+  width: 29px;
+  height: 31px;
+  --icon-color: hsl(0deg 0% 100%);
+  mask-image: var(--icon-tub);
+}
+
+.icon--vk::before {
+  width: 23px;
+  height: 16px;
+  --icon-color: hsl(0deg 0% 40%);
+  mask-image: var(--icon-vk);
+}
+
+.icon--inst::before {
+  width: 16px;
+  height: 16px;
+  --icon-color: hsl(0deg 0% 40%);
+  mask-image: var(--icon-inst);
+}
+
+.icon--fb::before {
+  width: 22px;
+  height: 22px;
+  --icon-color: hsl(0deg 0% 40%);
+  mask-image: var(--icon-fb);
+}
+
+.icon--academy::before {
+  width: 27px;
+  height: 34px;
+  --icon-color: hsl(0deg 0% 40%);
+  mask-image: var(--icon-academy);
 }

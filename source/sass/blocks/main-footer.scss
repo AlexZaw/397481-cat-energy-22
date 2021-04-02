@@ -1,0 +1,30 @@
+.main-footer {
+  --bg-basic-h: 0deg;
+  --bg-basic-s: 0%;
+  --bg-basic-l: 95%;
+  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+  background-color: var(--bg-basic);
+}
+
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-footer__logo-wrapper {
+  margin-top: 39px;
+  margin-bottom: 32px;
+}
+
+.main-footer__copyright {
+  --basic-l: 27%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  color: var(--basic);
+  padding: 22px 0;
+  font-size: 16px;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+}

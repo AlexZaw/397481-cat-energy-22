@@ -1,0 +1,14 @@
+.button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18 / 14 * 1;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  padding: 11px;
+  width: 100%;
+  --basic-l: 100%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  color: var(--basic);
+  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+  background-color: var(--bg-basic);
+}
