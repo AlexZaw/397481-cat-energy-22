@@ -1,0 +1,27 @@
+.contacts__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18 / 16 * 1;
+  text-transform: uppercase;
+  margin: 0;
+  --basic-l: 7%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  color: var(--basic);
+}
+
+.contacts__info {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  justify-content: space-between;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.contacts__address {
+  margin: 0;
+}
+
+.contacts iframe {
+  vertical-align: middle;
+}

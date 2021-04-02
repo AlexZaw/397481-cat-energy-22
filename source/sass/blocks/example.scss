@@ -1,0 +1,80 @@
+.example {
+  --bg-basic-h: 0deg;
+  --bg-basic-s: 0%;
+  --bg-basic-l: 92%;
+  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+  background-color: var(--bg-basic);
+}
+
+.example__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40 / 36 * 1;
+  --basic-l: 0%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  color: var(--basic);
+}
+
+.example__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.example__item {
+  position: relative;
+  padding: 15px;
+  width: 124px;
+  box-sizing: border-box;
+  --basic-l: 80%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  border: 1px solid var(--basic);
+  border-radius: 3px;
+  text-align: center;
+}
+
+.example__item--total {
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.example__value {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+  --basic-l: 0%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  color: var(--basic);
+}
+
+.example__description--bottom {
+  font-size: 12px;
+  line-height: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 87px;
+  bottom: -15px;
+  text-align: center;
+  background-color: var(--bg-basic);
+}
+
+.example__description--total {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20 / 14 * 1;
+  text-transform: uppercase;
+  --basic-l: 0%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  color: var(--basic);
+}
+
+.example__value--total {
+  font-size: 14px;
+  line-height: 20 / 14 * 1;
+}

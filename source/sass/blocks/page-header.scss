@@ -1,0 +1,14 @@
+.page-header__wrapper {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header__toggle {
+  width: 34px;
+  height: 42px;
+  visibility: hidden;
+}
