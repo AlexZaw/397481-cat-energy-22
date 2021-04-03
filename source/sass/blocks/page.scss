@@ -18,3 +18,8 @@
   margin: 0;
   padding: 0;
 }
+
+.page__a11y-hidden {
+  position: fixed;
+  transform: scale(0);
+}
