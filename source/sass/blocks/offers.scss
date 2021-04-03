@@ -17,7 +17,7 @@
 }
 
 .offers__title {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: var(--accent-font);
   font-size: 24px;
   font-weight: 400;
   line-height: 37 / 24 * 1;
@@ -28,7 +28,7 @@
 }
 
 .offers__link {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: var(--accent-font);
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;

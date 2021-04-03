@@ -7,7 +7,7 @@
 }
 
 .example__title {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: var(--accent-font);
   font-size: 36px;
   font-weight: 400;
   line-height: 40 / 36 * 1;
@@ -42,7 +42,7 @@
 }
 
 .example__value {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: var(--accent-font);
   font-size: 24px;
   line-height: 1;
   text-transform: uppercase;
@@ -65,7 +65,7 @@
 }
 
 .example__description--total {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: var(--accent-font);
   font-size: 14px;
   line-height: 20 / 14 * 1;
   text-transform: uppercase;
