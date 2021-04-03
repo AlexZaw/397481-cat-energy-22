@@ -1,8 +1,27 @@
 .main-nav {
-  width: 100%;
+  grid-column: 1/-1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(66px, max-content) 1fr;
+  align-items: center;
+}
+
+.main-nav__toggle {
+  grid-column: 3;
+  justify-self: end;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background: transparent;
+}
+
+.main-nav__toggle--hidden {
+  visibility: hidden;
 }
 
 .main-nav__list {
+  grid-column: 1/-1;
   margin: 0;
   padding: 0;
   list-style: none;
