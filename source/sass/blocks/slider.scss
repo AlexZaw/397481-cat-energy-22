@@ -19,7 +19,7 @@
   color: var(--basic);
 }
 
-.slider-bar {
+.slider__bar {
   width: 84px;
   padding: 4px 6px;
   box-sizing: border-box;
@@ -34,7 +34,7 @@
   border-radius: 6px;
 }
 
-.slider-bar__thumb {
+.slider__thumb {
   width: 35px;
   height: 6px;
   --bg-basic-h: 97deg;
