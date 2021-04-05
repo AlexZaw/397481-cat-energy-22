@@ -34,9 +34,8 @@
   --bg-basic-l: 100%;
   --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
   background-color: var(--bg-basic);
-  --basic-l: 80%;
-  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
-  border: 1px solid var(--basic);
+  --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
+  border: 1px solid var(--border-color);
   border-radius: 6px;
 }
 

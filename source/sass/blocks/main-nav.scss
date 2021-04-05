@@ -30,15 +30,16 @@
   font-weight: 500;
   line-height: 1;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .main-nav__item {
-  --basic-l: 90%;
-  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  --border-color-l: 90%;
+  --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
   margin: 0 -20px;
   padding-top: 22px;
   padding-bottom: 24px;
-  border-top: 1px solid var(--basic);
+  border-top: 1px solid var(--border-color);
 }
 
 .main-nav__link {
