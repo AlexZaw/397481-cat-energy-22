@@ -1,12 +1,12 @@
 .social {
-  --basic-l: 85%;
-  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  --border-color: 85%;
+  --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
   width: 100%;
   padding: 24px 0;
   display: grid;
   grid-template-columns: repeat(3, max-content);
   column-gap: 34px;
   justify-content: center;
-  border-top: 1px solid var(--basic);
-  border-bottom: 1px solid var(--basic);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }

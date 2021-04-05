@@ -1,0 +1,13 @@
+.feedback__title {
+  --basic-l: 0%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  color: var(--basic);
+}
+
+.feedback__text {
+  --basic-l: 0%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  color: var(--basic);
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+}

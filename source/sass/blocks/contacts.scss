@@ -18,6 +18,14 @@
   padding-bottom: 28px;
 }
 
+.contacts__info--accent {
+  --bg-basic-h: 0deg;
+  --bg-basic-s: 0%;
+  --bg-basic-l: 95%;
+  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+  background-color: var(--bg-basic);
+}
+
 .contacts__address {
   margin: 0;
 }
