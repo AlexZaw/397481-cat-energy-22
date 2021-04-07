@@ -1,0 +1,35 @@
+.special-offer {
+  text-align: center;
+  padding-top: 58px;
+  padding-bottom: 43px;
+  --bg-basic-o: 0.85;
+  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+  background-color: var(--bg-basic);
+  background-image: url("../../img/common/gift-photo-mobile@1x.jpg");
+}
+
+.special-offer__text {
+  --basic-l: 100%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  color: var(--basic);
+  font-size: 16px;
+  line-height: 20 / 16 * 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 161px;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: baseline;
+    width: 78px;
+    height: 80px;
+    margin-bottom: 48px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../img/stack.svg#icon-gift");
+  }
+}

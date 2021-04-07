@@ -1,16 +1,18 @@
 .page__body {
+  --basic-l: 27%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   margin: 0;
   font-family: var(--main-font);
   font-size: 14px;
   line-height: 18 / 14 * 1;
   font-weight: 400;
-  --basic-l: 27%;
-  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
+  background-color: hsl(0, 0, 100%);
 }
 
 .page__container {
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .page__list {

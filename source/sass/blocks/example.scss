@@ -31,13 +31,13 @@
   border: 1px solid var(--border-color);
   border-radius: 3px;
   text-align: center;
-}
 
-.example__item--total {
-  width: 100%;
-  border: none;
-  display: flex;
-  justify-content: center;
+  &--total {
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .example__value {
@@ -49,6 +49,11 @@
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
+
+  &--total {
+    font-size: 14px;
+    line-height: 20 / 14 * 1;
+  }
 }
 
 .example__description--bottom {
@@ -71,9 +76,4 @@
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
-}
-
-.example__value--total {
-  font-size: 14px;
-  line-height: 20 / 14 * 1;
 }
