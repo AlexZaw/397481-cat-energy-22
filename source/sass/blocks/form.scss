@@ -1,19 +1,26 @@
 .form {
   display: grid;
   row-gap: 22px;
+
+  ::placeholder {
+    --basic-l: 27%;
+    opacity: 1;
+    --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+    color: var(--basic);
+  }
 }
 
 .form__group {
   border: none;
   margin: 0;
   padding: 0;
-}
 
-.form__group--separate {
-  --border-color-l: 85%;
-  --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 22px;
+  &--separate {
+    --border-color-l: 85%;
+    --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 22px;
+  }
 }
 
 .form__list {
@@ -42,10 +49,10 @@
 .form__label {
   display: flex;
   align-items: center;
-}
 
-.form__label--with-icon {
-  position: relative;
+  &--with-icon {
+    position: relative;
+  }
 }
 
 .form__icon {
@@ -63,38 +70,8 @@
   box-sizing: border-box;
 }
 
-
-.form__title-wrapper {
-  font-family: var(--accent-font);
-  font-size: 24px;
-  line-height: 26 / 24 * 1;
-  vertical-align: middle;
-  padding: 0;
-  display: inline-block;
-  width: 100%;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.form__title-wrapper::after {
-  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 13px;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: var(--bg-basic);
-}
-
 .form__title {
-  --bg-basic-l: 100%;
-  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
-  display: inline-block;
-  vertical-align: baseline;
-  padding: 0 20px 22px;
-  background-color: var(--bg-basic);
+  padding-bottom: 22px;
 }
 
 .form__message {
@@ -114,10 +91,4 @@
   resize: none;
   box-sizing: border-box;
   border: 1px solid var(--border-color);
-}
-
-.form ::placeholder {
-  --basic-l: 27%;
-  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
-  color: var(--basic);
 }
