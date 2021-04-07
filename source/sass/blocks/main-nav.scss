@@ -14,11 +14,12 @@
   height: 18px;
   border: none;
   background: transparent;
+
+  &--hidden {
+    visibility: hidden;
+  }
 }
 
-.main-nav__toggle--hidden {
-  visibility: hidden;
-}
 
 .main-nav__list {
   grid-column: 1/-1;

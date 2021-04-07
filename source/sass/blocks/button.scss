@@ -1,8 +1,10 @@
 .button {
   font-family: var(--accent-font);
   font-size: 14px;
-  line-height: 18 / 14 * 1;
+  line-height: 20 / 14 * 1;
   text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
   padding: 11px;
   width: 100%;
@@ -12,4 +14,11 @@
   --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
   background-color: var(--bg-basic);
   border: none;
+  text-align: center;
+
+  &--accent {
+    --basic-l: 27%;
+    --bg-basic-s: 0%;
+    --bg-basic-l: 95%;
+  }
 }
