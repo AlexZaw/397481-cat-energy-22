@@ -11,6 +11,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .main-footer__logo-wrapper {
@@ -27,4 +31,12 @@
   align-self: stretch;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: 768px) {
+    align-self: auto;
+  }
+}
+
+.main-footer__copyright .icon {
+  margin-left: 22px;
 }

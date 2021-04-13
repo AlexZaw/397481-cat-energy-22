@@ -7,6 +7,35 @@
   grid-template-columns: repeat(3, max-content);
   column-gap: 34px;
   justify-content: center;
+  align-items: center;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+
+
+  @media (min-width: 768px) {
+    border: none;
+    width: auto;
+    flex-grow: 1;
+
+    .icon--vk {
+      @media (min-width: 768px) {
+        width: 30px;
+        height: 22px;
+      }
+
+      .icon--inst {
+        @media (min-width: 768px) {
+          width: 23px;
+          height: 23px;
+        }
+      }
+
+      .icon--fb {
+        @media (min-width: 768px) {
+          width: 28px;
+          height: 33px;
+        }
+      }
+    }
+  }
 }
