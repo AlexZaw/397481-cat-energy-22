@@ -5,6 +5,12 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: minmax(66px, max-content) 1fr;
   align-items: center;
+
+  @media (min-width: 768px) {
+    display: initial;
+    grid-column: auto;
+    justify-self: end;
+  }
 }
 
 .main-nav__toggle {
@@ -14,12 +20,16 @@
   height: 18px;
   border: none;
   background: transparent;
+  display: initial;
 
   &--hidden {
     visibility: hidden;
   }
-}
 
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
 
 .main-nav__list {
   grid-column: 1/-1;
@@ -32,6 +42,20 @@
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24 / 18 * 1;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 35px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .main-nav__item {
@@ -41,10 +65,40 @@
   padding-top: 22px;
   padding-bottom: 24px;
   border-top: 1px solid var(--border-color);
+
+  @media (min-width: 768px) {
+    border: none;
+    margin: auto;
+    padding: 0;
+  }
 }
 
 .main-nav__link {
+  position: relative;
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
+
+  @media (min-width: 768px) {
+    &--current::after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -9px;
+      --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+      background-color: var(--bg-basic);
+    }
+  }
+
+  &--accent {
+    @media (min-width: 1280px) {
+      --basic-l: 100%;
+
+      &::after {
+        --bg-basic-l: 100%;
+      }
+    }
+  }
 }

@@ -3,4 +3,8 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 1;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+  }
 }

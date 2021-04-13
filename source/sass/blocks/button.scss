@@ -21,4 +21,12 @@
     --bg-basic-s: 0%;
     --bg-basic-l: 95%;
   }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1;
+    width: auto;
+    min-width: 244px;
+    padding: 17px;
+  }
 }

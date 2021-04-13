@@ -1,5 +1,5 @@
 .offers {
-  padding-top: 20px;
+  // padding-top: 20px;
 }
 
 .offers__list {
@@ -8,6 +8,11 @@
   padding: 0;
   display: grid;
   row-gap: 20px;
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
 }
 
 .offers__item {
@@ -17,6 +22,73 @@
   --bg-basic-l: 95%;
   --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
   background-color: var(--bg-basic);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    padding-top: 77px;
+    padding-left: 52px;
+    padding-bottom: 55px;
+    display: grid;
+    row-gap: 24px;
+    grid-template-columns: 1fr 268px;
+    grid-template-rows: repeat(3, max-content);
+  }
+
+  @media (min-width: 1280px) {
+    display: flex;
+    padding-top: 46px;
+  }
+}
+
+.offers__item .icon {
+  @media (min-width: 768px) {
+    grid-column: 2;
+    grid-row: 1/-1;
+    justify-self: center;
+  }
+}
+
+.offers__item .icon--bg-round {
+  width: 50px;
+  height: 50px;
+
+  @media (min-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.offers__item .icon--cat-slim::before {
+  @media (min-width: 768px) {
+    width: 140px;
+    height: 192px;
+    margin-top: -19px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 70px;
+    height: 97px;
+    margin-top: -7px;
+  }
+}
+
+.offers__item .icon--cat-pro::before {
+  @media (min-width: 768px) {
+    width: 268px;
+    height: 112px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 134px;
+    height: 56px;
+  }
 }
 
 .offers__title {
@@ -25,9 +97,26 @@
   font-weight: 400;
   line-height: 37 / 24 * 1;
   text-transform: uppercase;
+  margin-left: 20px;
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 1;
+    margin: 0;
+  }
+
+  @media (min-width: 1280px) {
+    margin-left: 62px;
+  }
+}
+
+.offers__text {
+  @media (min-width: 768px) {
+    margin: 0;
+  }
 }
 
 .offers__link {
@@ -38,4 +127,14 @@
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    grid-column: 1;
+    margin-top: 24px;
+  }
+
+  @media (min-width: 1280px) {
+    margin: 0;
+  }
 }

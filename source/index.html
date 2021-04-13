@@ -8,15 +8,19 @@
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
-<body class="page__body">
+<body class="page__body page__index">
   <header class="page-header page__container">
     <div class="page-header__wrapper">
       <a class="link page-header__logo-image">
-        <img src="img/logos/mobile/logo-image.svg" width="34" height="38"
-          alt="Логотип Cat Energy. Стилизованый кот в маске.">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="img/logos/logo-desktop.svg">
+          <source srcset="img/logos/logo-tablet.svg" media="(min-width: 768px)">
+          <img class="page-header_" src="img/logos/logo-mobile.svg" alt="Логотип Cat Energy Стилизованый кот в маске"
+            width="34" height="38">
+        </picture>
       </a>
       <a class="link page-header__logo-text">
-        <img src="img/logos/mobile/logo-text.svg" width="101" height="18" alt="Текстовый логотип. Надпись Cat Energy">
+        <img src="img/logos/logo-mobile-text.svg" width="101" height="18" alt="Текстовый логотип. Надпись Cat Energy">
       </a>
     </div>
     <nav class="main-nav">
@@ -26,18 +30,18 @@
         </span>
       </button>
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--current">
-          <a class="link main-nav__link" href="index.html">
+        <li class="main-nav__item">
+          <a class="link main-nav__link main-nav__link--accent main-nav__link--current" href="index.html">
             Главная
           </a>
         </li>
         <li class="main-nav__item">
-          <a class="link main-nav__link" href="catalog.html">
+          <a class="link main-nav__link--accent main-nav__link" href="catalog.html">
             Каталог продукции
           </a>
         </li>
         <li class="main-nav__item">
-          <a class="link main-nav__link" href="form.html">
+          <a class="link main-nav__link--accent main-nav__link" href="form.html">
             Подбор программы
           </a>
         </li>
@@ -46,25 +50,33 @@
   </header>
   <main class="page-main content">
     <section class="promo">
-      <div class="page__container promo__container">
-        <h1 class="promo__title main-title">
-          Функциональное питание для котов
-        </h1>
-        <p class="promo__slogan">
-          Занялся собой? Займись котом!
-        </p>
-        <img src="img/promo/index-can-mobile@1x.png" width="280" height="270"
-          alt="Круглая картонная коробка в оранжевых тонах">
-        <a class="link button promo__link" href="form.html">
-          Подобрать программу
-        </a>
+      <div class="page__container">
+        <div class="promo__wrapper">
+          <h1 class="promo__title main-title">
+            Функциональное <br aria-hidden="true">питание для котов
+          </h1>
+          <p class="promo__slogan">
+            Занялся собой? Займись котом!
+          </p>
+          <a class="link button promo__link" href="form.html">
+            Подобрать программу
+          </a>
+          <div class="promo__image-wrapper">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/promo/index-can-desktop@1x.png">
+              <source srcset="img/promo/index-can-tablet@1x.png" media="(min-width: 768px)">
+              <img class="promo__image" src="img/promo/index-can-mobile@1x.png"
+                alt="Круглая картонная коробка в оранжевых тонах" width="280" height="270">
+            </picture>
+          </div>
+        </div>
       </div>
     </section>
     <section class="offers page__container">
       <ul class="offers__list">
         <li class="offers__item">
+          <span class="icon icon--bg icon--bg-round icon--cat-slim"></span>
           <h2 class="offers__title">
-            <span class="icon icon--bg icon--bg-round icon--cat-slim"></span>
             Похудение
           </h2>
           <p class="offers__text">
@@ -76,12 +88,13 @@
           </a>
         </li>
         <li class="offers__item">
+          <span class="icon icon--bg icon--bg-round icon--cat-pro"></span>
           <h2 class="offers__title">
-            <span class="icon icon--bg icon--bg-round icon--cat-pro"></span>
             Набор массы
           </h2>
           <p class="offers__text">
-            Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
+            Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту
+            нарастить
             необходимые мышцы!
           </p>
           <a class="link offers__link" href="#">
@@ -91,7 +104,7 @@
       </ul>
     </section>
     <section class="description page__container">
-      <h2 class="description__title">
+      <h2 class="main-title description__title">
         Как это работает
       </h2>
       <ul class="description__list">
@@ -115,52 +128,61 @@
         <li class="description__item">
           <span class="icon icon--bg icon--alarm"></span>
           <p class="description__text">
-            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+            Уже через месяц наслаждайтесь изменениями к лучшему<br aria-hidden="true"> вашего питомца!
           </p>
         </li>
       </ul>
     </section>
     <section class="example">
-      <div class="page__container">
-        <h2 class="example__title">
-          Живой пример
-        </h2>
-        <p class="example__text">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-          изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <dl class="example__list">
-          <div class="example__item">
-            <dt class="example__description example__description--bottom">
-              снижение <br class="page__a11y-hidden"> веса
-            </dt>
-            <dd class="example__value">
-              5 кг
-            </dd>
-          </div>
-          <div class="example__item">
-            <dt class="example__description example__description--bottom">
-              затрачено времени
-            </dt>
-            <dd class="example__value">
-              60 Дней
-            </dd>
-          </div>
-          <div class="example__item example__item--total">
-            <dt class="example__description example__description--total">
-              Затраты на питание:
-            </dt>
-            <dd class="example__value example__value--total">
-              15 000 РУБ.
-            </dd>
-          </div>
-        </dl>
+      <div class="page__container example__wrapper">
+        <div class="example__info">
+          <h2 class="main-title example__title">
+            Живой пример
+          </h2>
+          <p class="example__text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
+            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <dl class="example__list">
+            <div class="example__item">
+              <dt class="example__description example__description--bottom">
+                снижение <br aria-hidden="true"> веса
+              </dt>
+              <dd class="example__value">
+                5 кг
+              </dd>
+            </div>
+            <div class="example__item">
+              <dt class="example__description example__description--bottom">
+                затрачено времени
+              </dt>
+              <dd class="example__value">
+                60 Дней
+              </dd>
+            </div>
+            <div class="example__item example__item--total">
+              <dt class="example__description example__description--total">
+                Затраты на питание:
+              </dt>
+              <dd class="example__value example__value--total">
+                15 000 РУБ.
+              </dd>
+            </div>
+          </dl>
+        </div>
         <div class="example__slider slider">
           <ul class="slider__list">
             <li class="slider__item slider__item--before slider__item--current">
-              <img src="img/slider/mobile/before.png" alt="Кот с лишним весом">
+              <!-- <noscript> -->
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/slider/image-cat-desktop@1x.png">
+                <source srcset="img/slider/image-cat-tablet@1x.png" media="(min-width: 768px)">
+                <img class="slider__image" src="img/slider/before-mobile@1x.png" alt="Кот с лишним весом" width="293"
+                  height="232">
+              </picture>
+              <!-- </noscript> -->
             </li>
-            <li class="slider__item slider__item--after">
-              <img src="img/slider/mobile/after.png" alt="Поджарый кот">
+            <li class="slider__item slider__item--after" hidden>
+              <img src="img/slider/after-mobile@1x.png" alt="Поджарый кот">
             </li>
           </ul>
           <div class="example__control slider__control" hidden>
@@ -184,13 +206,15 @@
   </main>
   <aside class="contacts">
     <h2 class="page__a11y-hidden">Наш адрес</h2>
-    <div class="contacts__info page__container">
-      <p class="contacts__title">
-        Приглашаем к&nbsp;сотрудничеству дилеров!
-      </p>
-      <address class="contacts__address" id="address">
-        ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-      </address>
+    <div class="page__container contacts__wrapper">
+      <div class="contacts__info">
+        <p class="contacts__title">
+          Приглашаем к&nbsp;сотрудничеству дилеров!
+        </p>
+        <address class="contacts__address" id="address">
+          ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
+        </address>
+      </div>
     </div>
     <div class="contacts__map">
       <iframe aria-labelledby="address"

@@ -4,18 +4,34 @@
   padding: 0;
 }
 
+.slider__image {
+  @media (min-width: 768px) {
+    width: 708px;
+    height: 540px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 650px;
+    height: 520px;
+  }
+}
+
 .slider__control {
   width: 228px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  visibility: hidden;
+  // visibility: hidden;
+  @media (min-width: 768px) {
+    width: 590px;
+  }
 }
 
 .slider__button {
   background: none;
   border: none;
+  padding: 0;
   font-family: var(--accent-font);
   font-size: 16px;
   line-height: 20 / 16 * 1;
@@ -23,6 +39,27 @@
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 0;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      --border-color-h: 0deg;
+      --border-color-s: 0%;
+      --border-color-l: 0%;
+      --border-color-o: 24%;
+      --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
+      border-bottom: 1px dotted var(--border-color);
+    }
+  }
 }
 
 .slider__bar {
@@ -37,6 +74,14 @@
   --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
   border: 1px solid var(--border-color);
   border-radius: 6px;
+
+  @media (min-width: 768px) {
+    position: relative;
+    --bg-basic-l: 86%;
+    border: none;
+    width: 428px;
+    height: 6px;
+  }
 }
 
 .slider__thumb {
@@ -48,4 +93,18 @@
   --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
   background-color: var(--bg-basic);
   border-radius: 6px;
+
+  @media (min-width: 768px) {
+    width: 8px;
+    height: 8px;
+    --border-color-l: 100%;
+    --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
+    border: 13px solid var(--border-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px hsl(0, 0%, 80%), 0 1px 3px hsla(0, 0%, 0%, 0.16);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
