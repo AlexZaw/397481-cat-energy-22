@@ -74,13 +74,14 @@
 }
 
 .main-nav__link {
-  position: relative;
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
 
   @media (min-width: 768px) {
-    &--current::after {
+    position: relative;
+
+    &[aria-current]::after {
       content: "";
       height: 2px;
       width: 100%;
