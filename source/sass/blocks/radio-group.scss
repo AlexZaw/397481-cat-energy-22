@@ -1,3 +1,18 @@
+.radio-group {
+  padding: 22px 20px;
+  margin: 0 -20px;
+  --border-color-l: 85%;
+  --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+
+  @media (min-width: 768px) {
+    padding: 25px 30px;
+    margin: 0;
+    border: 1px solid var(--border-color);
+  }
+}
+
 .radio-group__label::before {
   $bg-diameter: 14px;
   $bg-radius: $bg-diameter / 2;
@@ -15,10 +30,20 @@
   content: "";
   width: 30px;
   height: 30px;
+  box-sizing: border-box;
   border: 1px solid var(--border-color);
   border-radius: 50%;
   margin-right: 20px;
   background-image: radial-gradient(circle at 50%, var(--bg-basic) $bg-radius, transparent $bg-transparent-radius);
+
+  @media (min-width: 768px) {
+    $bg-diameter: 18px;
+    $bg-radius: $bg-diameter / 2;
+    $bg-transparent-radius: $bg-radius + 1;
+    background-image: radial-gradient(circle at 50%, var(--bg-basic) $bg-radius, transparent $bg-transparent-radius);
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .radio-group__input:checked + .radio-group__label::before {
