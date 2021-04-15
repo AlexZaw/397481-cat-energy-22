@@ -1,11 +1,12 @@
 .page__body {
-  --basic-l: 27%;
-  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+
   margin: 0;
   font-family: var(--main-font);
   font-size: 14px;
   line-height: 18 / 14 * 1;
   font-weight: 400;
+  --basic-l: 27%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
   background-color: hsl(0, 0, 100%);
 
@@ -46,17 +47,33 @@
 }
 
 .page__container {
+  margin: 0;
+  padding-top: 0;
   padding-left: 20px;
   padding-right: 20px;
+  border: none;
 
   @media (min-width: 768px) {
-    padding: 0 3.9%;
+    padding-left: 3.9%;
+    padding-right: 3.9%;
   }
 
   @media (min-width: 1280px) {
+    width: 100%;
     max-width: 1220px;
     margin: 0 auto;
     padding: 0;
+  }
+
+  &--catalog {
+    @media (min-width: 768px) {
+      margin-left: 40px;
+      margin-right: 36px;
+    }
+
+    @media (min-width: 1280px) {
+      margin: 0 auto;
+    }
   }
 }
 

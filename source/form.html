@@ -15,7 +15,7 @@
         <picture>
           <source media="(min-width: 1280px)" srcset="img/logos/logo-desktop.svg">
           <source srcset="img/logos/logo-tablet.svg" media="(min-width: 768px)">
-          <img src="img/logos/logo-mobile.svg" alt="Логотип Cat Energy Стилизованый кот в маске">
+          <img src="img/logos/logo-mobile.svg" alt="Логотип Cat Energy Стилизованый кот в маске" width="34" height="38">
         </picture>
       </a>
       <a class="link page-header__logo-text" href="index.html">
@@ -49,7 +49,7 @@
   </header>
   <main class="page-main">
     <section class="feedback">
-      <div class="page__container">
+      <div class="page__container page__container--catalog">
         <h1 class="feedback__title main-title">
           Подбор программы
         </h1>
@@ -59,21 +59,21 @@
         </p>
       </div>
       <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post" name="feedback-form">
-        <fieldset class="form__group form__group--separate">
-          <legend class="page__a11y-hidden">
-            Введите данные питомца
-          </legend>
-          <div class="page__container">
+        <div class="page__container page__container--catalog form__container">
+          <fieldset class="form__group">
+            <legend class="page__a11y-hidden">
+              Введите данные питомца
+            </legend>
             <div class="form__list">
               <p class="form__item">
                 <label class="form__label">
-                  Имя:*
+                  Имя:<sup>*</sup>
                   <input class="form__input" type="text" name="cat-name" placeholder="Барсик" required>
                 </label>
               </p>
               <p class="form__item">
                 <label class="form__label">
-                  Вес (кг):*
+                  Вес (кг):<sup>*</sup>
                   <input class="form__input" type="number" name="cat-weight" placeholder="7" required>
                 </label>
               </p>
@@ -84,14 +84,12 @@
                 </label>
               </p>
             </div>
-          </div>
-        </fieldset>
-        <fieldset class="form__group radio-group form__group--separate">
-          <legend class="page__a11y-hidden">
-            Выберите программу
-          </legend>
-          <div class="page__container">
-            <ul class="form__list">
+          </fieldset>
+          <fieldset class="form__group radio-group">
+            <legend class="page__a11y-hidden">
+              Выберите программу
+            </legend>
+            <ul class="form__list form__list--radio">
               <li class="form__item">
                 <input class="radio-group__input page__a11y-hidden" id="slimming" type="radio" name="program"
                   value="slimming" checked>
@@ -114,20 +112,18 @@
                 </label>
               </li>
             </ul>
-          </div>
-        </fieldset>
-        <fieldset class="form__group">
-          <legend class="cross-title">
-            <span class="cross-title__text form__title">
-              Контактные данные<br aria-hidden="true">
-              (владельца кота)
-            </span>
-          </legend>
-          <div class="page__container">
-            <div class="form__list">
+          </fieldset>
+        </div>
+        <div class="form__cross-line">
+          <fieldset class="page__container page__container--catalog">
+            <legend class="cross-title form__title">
+                Контактные данные<br aria-hidden="true">
+                (владельца кота)
+            </legend>
+            <div class="form__list form__list--owner">
               <p class="form__item">
                 <label class="form__label form__label--with-icon">
-                  E-mail:*
+                  E-mail:<sup>*</sup>
                   <input class="form__input form__input--email" type="email" name="client-email"
                     placeholder="kuklachev@gmail.com" required>
                   <span class="icon icon--email form__icon"></span>
@@ -135,34 +131,30 @@
               </p>
               <p class="form__item">
                 <label class="form__label form__label--with-icon">
-                  Телефон:*
+                  Телефон:<sup>*</sup>
                   <input class="form__input form__input--phone" type="tel" name="client-phone"
                     placeholder="8 (960) 900-60-90" required>
                   <span class="icon icon--phone form__icon"></span>
                 </label>
               </p>
             </div>
-          </div>
-        </fieldset>
-        <fieldset class="form__group">
-          <label class="cross-title" for="message">
-            <span class="cross-title__text form__title">
-              Комментарий
-            </span>
-          </label>
-          <div class="page__container">
+          </fieldset>
+        </div>
+        <div class="form__cross-line">
+          <fieldset class="page__container page__container--catalog">
+            <label class="cross-title form__title" for="message">
+                Комментарий
+            </label>
             <textarea class="form__message" name="client-message" id="message"
               placeholder="Расскажите обо всех повадках кота"></textarea>
-          </div>
-        </fieldset>
-        <fieldset class="form__group checkbox-group">
-          <legend class="cross-title">
-            <span class="cross-title__text form__title">
-              Дополнительно
-            </span>
-          </legend>
-          <div class="page__container">
-            <ul class="form__list">
+          </fieldset>
+        </div>
+        <div class="form__cross-line">
+          <fieldset class="page__container page__container--catalog checkbox-group">
+            <legend class="cross-title form__title form__title--accent">
+                Дополнительно
+            </legend>
+            <ul class="form__list form__list--checkbox">
               <li class="form__item">
                 <input class="checkbox-group__input page__a11y-hidden" id="sweetener" type="checkbox" name="extra"
                   value="sweetener" checked>
@@ -192,28 +184,32 @@
                 </label>
               </li>
             </ul>
+          </fieldset>
+        </div>
+        <div class="page__container page__container--catalog">
+          <div class="form__bottom">
+            <button class="button form__submit" type="submit">
+              Отправить заявку
+            </button>
+            <p class="form__note">
+              * &mdash; Обязательные поля
+            </p>
           </div>
-        </fieldset>
-        <div class="page__container">
-          <button class="button form__submit" type="submit">
-            Отправить заявку
-          </button>
-          <p class="note">
-            * &mdash; Обязательные поля
-          </p>
         </div>
       </form>
     </section>
   </main>
   <aside class="contacts">
     <h2 class="page__a11y-hidden">Наш адрес</h2>
-    <div class="contacts__info contacts__info--accent page__container">
-      <p class="contacts__title">
-        Приглашаем к&nbsp;сотрудничеству дилеров!
-      </p>
-      <address class="contacts__address" id="address">
-        ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-      </address>
+    <div class="page__container page__container--catalog contacts__wrapper contacts__wrapper--accent">
+      <div class="contacts__info">
+        <p class="contacts__title">
+          Приглашаем к&nbsp;сотрудничеству дилеров!
+        </p>
+        <address class="contacts__address" id="address">
+          ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
+        </address>
+      </div>
     </div>
     <div class="contacts__map">
       <iframe aria-labelledby="address"

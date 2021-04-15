@@ -1,6 +1,25 @@
 .contacts__wrapper {
+  --bg-basic-h: 0deg;
+  --bg-basic-s: 0%;
+  --bg-basic-l: 100%;
+  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+  background-color: var(--bg-basic);
+
   @media (min-width: 1280px) {
     position: relative;
+  }
+
+  &--accent {
+    --bg-basic-l: 95%;
+
+    @media (min-width: 768px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media (min-width: 1280px) {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -28,9 +47,7 @@
   align-items: center;
   padding-top: 28px;
   padding-bottom: 28px;
-  --bg-basic-l: 100%;
-  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
-  background-color: var(--bg-basic);
+
 
   @media (min-width: 768px) {
     padding: 62px 41px 51px;
@@ -38,19 +55,14 @@
   }
 
   @media (min-width: 1280px) {
+    --bg-basic-l: 100%;
+    --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+    background-color: var(--bg-basic);
     position: absolute;
     top: 95px;
     left: 0;
     padding: 66px 76px 51px;
     column-gap: 80px;
-  }
-
-  &--accent {
-    --bg-basic-h: 0deg;
-    --bg-basic-s: 0%;
-    --bg-basic-l: 95%;
-    --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
-    background-color: var(--bg-basic);
   }
 }
 
