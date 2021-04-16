@@ -48,6 +48,10 @@
     row-gap: 20px;
   }
 
+  &--radio {
+    row-gap: 13px;
+  }
+
   &--checkbox {
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;

@@ -49,7 +49,7 @@
   </header>
   <main class="page-main">
     <section class="feedback">
-      <div class="page__container page__container--catalog">
+      <div class="page__container page__container--form">
         <h1 class="feedback__title main-title">
           Подбор программы
         </h1>
@@ -58,8 +58,8 @@
           программу питания для вашего кота
         </p>
       </div>
-      <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post" name="feedback-form">
-        <div class="page__container page__container--catalog form__container">
+      <form class="form" action="https://echo.htmlacademy.ru" method="post" name="feedback-form">
+        <div class="page__container page__container--form form__container">
           <fieldset class="form__group">
             <legend class="page__a11y-hidden">
               Введите данные питомца
@@ -67,13 +67,13 @@
             <div class="form__list">
               <p class="form__item">
                 <label class="form__label">
-                  Имя:<sup>*</sup>
+                  Имя:<sup aria-hidden="true">*</sup>
                   <input class="form__input" type="text" name="cat-name" placeholder="Барсик" required>
                 </label>
               </p>
               <p class="form__item">
                 <label class="form__label">
-                  Вес (кг):<sup>*</sup>
+                  Вес (кг):<sup aria-hidden="true">*</sup>
                   <input class="form__input" type="number" name="cat-weight" placeholder="7" required>
                 </label>
               </p>
@@ -115,7 +115,7 @@
           </fieldset>
         </div>
         <div class="form__cross-line">
-          <fieldset class="page__container page__container--catalog">
+          <fieldset class="page__container page__container--form">
             <legend class="cross-title form__title">
                 Контактные данные<br aria-hidden="true">
                 (владельца кота)
@@ -123,7 +123,7 @@
             <div class="form__list form__list--owner">
               <p class="form__item">
                 <label class="form__label form__label--with-icon">
-                  E-mail:<sup>*</sup>
+                  E-mail:<sup aria-hidden="true">*</sup>
                   <input class="form__input form__input--email" type="email" name="client-email"
                     placeholder="kuklachev@gmail.com" required>
                   <span class="icon icon--email form__icon"></span>
@@ -131,7 +131,7 @@
               </p>
               <p class="form__item">
                 <label class="form__label form__label--with-icon">
-                  Телефон:<sup>*</sup>
+                  Телефон:<sup aria-hidden="true">*</sup>
                   <input class="form__input form__input--phone" type="tel" name="client-phone"
                     placeholder="8 (960) 900-60-90" required>
                   <span class="icon icon--phone form__icon"></span>
@@ -141,7 +141,7 @@
           </fieldset>
         </div>
         <div class="form__cross-line">
-          <fieldset class="page__container page__container--catalog">
+          <fieldset class="page__container page__container--form">
             <label class="cross-title form__title" for="message">
                 Комментарий
             </label>
@@ -150,7 +150,7 @@
           </fieldset>
         </div>
         <div class="form__cross-line">
-          <fieldset class="page__container page__container--catalog checkbox-group">
+          <fieldset class="page__container page__container--form checkbox-group">
             <legend class="cross-title form__title form__title--accent">
                 Дополнительно
             </legend>
@@ -186,12 +186,12 @@
             </ul>
           </fieldset>
         </div>
-        <div class="page__container page__container--catalog">
+        <div class="page__container page__container--form">
           <div class="form__bottom">
             <button class="button form__submit" type="submit">
               Отправить заявку
             </button>
-            <p class="form__note">
+            <p class="form__note" aria-hidden="true">
               * &mdash; Обязательные поля
             </p>
           </div>
@@ -201,7 +201,7 @@
   </main>
   <aside class="contacts">
     <h2 class="page__a11y-hidden">Наш адрес</h2>
-    <div class="page__container page__container--catalog contacts__wrapper contacts__wrapper--accent">
+    <div class="page__container page__container--form contacts__wrapper contacts__wrapper--accent">
       <div class="contacts__info">
         <p class="contacts__title">
           Приглашаем к&nbsp;сотрудничеству дилеров!
