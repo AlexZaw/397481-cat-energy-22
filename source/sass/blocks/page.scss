@@ -1,5 +1,8 @@
-.page__body {
+.page {
+  overflow-x: hidden;
+}
 
+.page__body {
   margin: 0;
   font-family: var(--main-font);
   font-size: 14px;
@@ -9,6 +12,7 @@
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
   background-color: hsl(0, 0, 100%);
+  overflow-x: hidden;
 
   @media (min-width: 768px) {
     font-size: 16px;
