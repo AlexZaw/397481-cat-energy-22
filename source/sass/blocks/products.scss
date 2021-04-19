@@ -3,4 +3,16 @@
   padding: 0;
   list-style: none;
   display: grid;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 140px;
+    margin-top: 164px;
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
 }
