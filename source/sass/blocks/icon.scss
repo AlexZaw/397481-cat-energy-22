@@ -13,18 +13,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   --icon-color: hsl(0deg 0% 0%);
-  --icon-phone: url("../../img/stack.svg#phone");
-  --icon-email: url("../../img/stack.svg#email");
-  --icon-cat-slim: url("../../img/stack.svg#cat-slim");
-  --icon-cat-pro: url("../../img/stack.svg#cat-pro");
-  --icon-alarm: url("../../img/stack.svg#icon-alarm");
-  --icon-eat: url("../../img/stack.svg#icon-eat");
-  --icon-leaf: url("../../img/stack.svg#icon-leaf");
-  --icon-tub: url("../../img/stack.svg#icon-tub");
-  --icon-vk: url("../../img/stack.svg#icon-vkontakte");
-  --icon-inst: url("../../img/stack.svg#icon-instagram");
-  --icon-fb: url("../../img/stack.svg#icon-facebook");
-  --icon-academy: url("../../img/stack.svg#academy");
   mask-size: cover;
   mask-position: center;
   mask-repeat: no-repeat;
@@ -49,80 +37,80 @@
 .icon--phone::before {
   width: 20px;
   height: 20px;
-  mask-image: var(--icon-phone);
+  mask-image: url("../../img/stack.svg#phone");
 }
 
 .icon--email::before {
   width: 18px;
   height: 13px;
-  mask-image: var(--icon-email);
+  mask-image: url("../../img/stack.svg#email");
 }
 
 .icon--cat-slim::before {
   width: 36px;
   height: 50px;
   margin-top: -3px;
-  mask-image: var(--icon-cat-slim);
+  mask-image: url("../../img/stack.svg#cat-slim");
 }
 
 .icon--cat-pro::before {
   width: 67px;
   height: 28px;
-  mask-image: var(--icon-cat-pro);
+  mask-image: url("../../img/stack.svg#cat-pro");
 }
 
 .icon--alarm::before {
   width: 32px;
   height: 33px;
   --icon-color: hsl(0deg 0% 100%);
-  mask-image: var(--icon-alarm);
+  mask-image: url("../../img/stack.svg#icon-alarm");
 }
 
 .icon--eat::before {
   width: 25px;
   height: 30px;
   --icon-color: hsl(0deg 0% 100%);
-  mask-image: var(--icon-eat);
+  mask-image: url("../../img/stack.svg#icon-eat");
 }
 
 .icon--leaf::before {
   width: 30px;
   height: 32px;
   --icon-color: hsl(0deg 0% 100%);
-  mask-image: var(--icon-leaf);
+  mask-image: url("../../img/stack.svg#icon-leaf");
 }
 
 .icon--tub::before {
   width: 29px;
   height: 31px;
   --icon-color: hsl(0deg 0% 100%);
-  mask-image: var(--icon-tub);
+  mask-image: url("../../img/stack.svg#icon-tub");
 }
 
 .icon--vk::before {
   width: 23px;
   height: 16px;
   --icon-color: hsl(0deg 0% 40%);
-  mask-image: var(--icon-vk);
+  mask-image: url("../../img/stack.svg#icon-vkontakte");
 }
 
 .icon--inst::before {
   width: 16px;
   height: 16px;
   --icon-color: hsl(0deg 0% 40%);
-  mask-image: var(--icon-inst);
+  mask-image: url("../../img/stack.svg#icon-instagram");
 }
 
 .icon--fb::before {
   width: 22px;
   height: 22px;
   --icon-color: hsl(0deg 0% 40%);
-  mask-image: var(--icon-fb);
+  mask-image: url("../../img/stack.svg#icon-facebook");
 }
 
 .icon--academy::before {
   width: 27px;
   height: 34px;
   --icon-color: hsl(0deg 0% 40%);
-  mask-image: var(--icon-academy);
+  mask-image: url("../../img/stack.svg#academy");
 }
