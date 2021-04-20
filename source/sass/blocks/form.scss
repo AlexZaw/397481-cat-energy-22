@@ -139,26 +139,6 @@
   }
 }
 
-.form__cross-line {
-  position: relative;
-
-  &::after {
-    --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 13px;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background-color: var(--bg-basic);
-
-    @media (min-width: 768px) {
-      top: 18px;
-    }
-  }
-}
-
 .form__title {
   font-family: var(--accent-font);
   font-size: 24px;
