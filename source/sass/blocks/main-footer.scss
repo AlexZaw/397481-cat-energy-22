@@ -18,19 +18,45 @@
 }
 
 .main-footer__logo-wrapper {
-  margin-top: 39px;
-  margin-bottom: 32px;
+  margin-top: 37px;
+  margin-bottom: 28px;
+}
+
+.main-footer__logo-image {
+  &[href] {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
 }
 
 .main-footer__copyright {
   --basic-l: 27%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
-  padding: 22px 0;
+  padding: 25px 0;
   font-size: 16px;
   align-self: stretch;
   display: flex;
   justify-content: space-between;
+
+  ::before {
+    transition: background-color 0.3s;
+  }
+
+  &:hover ::before {
+    --icon-color: hsl(97deg 53% 47%);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: 768px) {
     align-self: auto;

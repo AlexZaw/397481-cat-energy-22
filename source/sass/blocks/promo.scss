@@ -62,6 +62,8 @@
 }
 
 .promo__title {
+  margin-bottom: 13px;
+
   @media (min-width: 768px) {
     margin-left: 80px;
   }
@@ -83,6 +85,8 @@
 }
 
 .promo__image-wrapper {
+  margin-top: 15px;
+
   @media (min-width: 768px) {
     grid-row: 3;
     grid-column: 1/-1;
@@ -111,6 +115,9 @@
 
 .promo__link {
   order: 4;
+  font-size: 14px;
+  margin-top: 3px;
+  padding: 11px;
 
   @media (min-width: 768px) {
     grid-row: 3;

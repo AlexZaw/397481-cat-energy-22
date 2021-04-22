@@ -19,6 +19,8 @@
 .slider__control {
   width: 228px;
   margin: 0 auto;
+  padding: 0 13px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,11 +41,25 @@
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
+  cursor: pointer;
 
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 1;
     position: relative;
+
+    &:hover {
+      &::after {
+        --border-color-o: 40%;
+        border-bottom: 1px solid var(--border-color);
+      }
+    }
+
+    &:active {
+      &::after {
+        border: none;
+      }
+    }
 
     &::after {
       content: "";
@@ -93,6 +109,7 @@
   --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
   background-color: var(--bg-basic);
   border-radius: 6px;
+  cursor: pointer;
 
   @media (min-width: 768px) {
     width: 8px;
@@ -106,5 +123,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    &:hover {
+      box-shadow: 0 0 0 1px hsl(0, 0%, 80%), 0 2px 4px hsla(0, 0%, 0%, 0.19);
+    }
+
+    &:active {
+      box-shadow: 0 0 0 1px hsl(97, 53%, 47%), 0 3px 5px hsla(0, 0%, 0%, 0.2);
+    }
   }
 }

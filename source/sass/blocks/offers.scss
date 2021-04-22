@@ -1,5 +1,5 @@
 .offers {
-  // padding-top: 20px;
+  padding-top: 22px;
 }
 
 .offers__list {
@@ -16,7 +16,7 @@
 }
 
 .offers__item {
-  padding: 20px;
+  padding: 24px 20px 20px;
   --bg-basic-h: 0deg;
   --bg-basic-s: 0%;
   --bg-basic-l: 95%;
@@ -97,7 +97,9 @@
   font-weight: 400;
   line-height: 37 / 24 * 1;
   text-transform: uppercase;
+  margin-top: 0;
   margin-left: 20px;
+  margin-bottom: 0;
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
@@ -114,8 +116,17 @@
 }
 
 .offers__text {
+  margin-top: 23px;
+  margin-bottom: 0;
+  padding-bottom: 21px;
+  line-height: 1.3;
+  --border-color-l: 85%;
+  --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
+  border-bottom: 1px solid var(--border-color);
+
   @media (min-width: 768px) {
     margin: 0;
+    border: none;
   }
 }
 
@@ -123,10 +134,37 @@
   font-family: var(--accent-font);
   font-size: 16px;
   line-height: 1;
+  margin-top: 20px;
   text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 12px;
+    margin-left: 15px;
+    display: inline-block;
+    background-image: url("../../img/stack.svg#arrow-narrow");
+    background-size: cover;
+    background-position: center;
+    transition: width 0.1s;
+  }
+
+  &:hover {
+    &::after {
+      width: 32px;
+      background-image: url("../../img/stack.svg#arrow-wide");
+    }
+  }
 
   @media (min-width: 768px) {
     font-size: 20px;
