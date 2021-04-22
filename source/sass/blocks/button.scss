@@ -16,6 +16,15 @@
   border: none;
   text-align: center;
 
+  &:hover {
+    --bg-basic-s: 57%;
+    --bg-basic-l: 43%;
+  }
+
+  &:active {
+    --basic-o: 0.3;
+  }
+
   &--accent {
     --basic-l: 27%;
     --bg-basic-s: 0%;

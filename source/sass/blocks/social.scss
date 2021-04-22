@@ -2,7 +2,7 @@
   --border-color: 85%;
   --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
   width: 100%;
-  padding: 24px 0;
+  padding: 22px 0;
   display: grid;
   grid-template-columns: repeat(3, max-content);
   column-gap: 34px;
@@ -37,5 +37,19 @@
         }
       }
     }
+  }
+}
+
+.social__link {
+  ::before {
+    transition: background-color 0.3s;
+  }
+
+  &:hover ::before {
+    --icon-color: hsl(97deg 53% 47%);
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
