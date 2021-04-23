@@ -149,20 +149,20 @@
 
   &::after {
     content: "";
-    width: 24px;
+    width: 32px;
     height: 12px;
     margin-left: 15px;
     display: inline-block;
-    background-image: url("../../img/stack.svg#arrow-narrow");
+    background-image: url("../../img/stack.svg#offers-arrow");
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    transition: width 0.1s;
+    background-position: -8px center;
+    transition: background-position 0.2s;
   }
 
   &:hover {
     &::after {
-      width: 32px;
-      background-image: url("../../img/stack.svg#arrow-wide");
+      background-position: 0 center;
     }
   }
 
