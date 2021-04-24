@@ -131,6 +131,7 @@
   }
 
   &:focus {
+    outline: none;
     --border-color-l: 27%;
     box-shadow: 0 0 0 1px var(--border-color);
   }
