@@ -175,7 +175,19 @@
       }
     }
 
+    &:invalid:not(:user-invalid) {
+      + .icon::before {
+        --icon-color: hsl(0 0% 0%);
+      }
+    }
+
     &:focus {
+      + .icon::before {
+        --icon-color: hsl(97 53% 47%);
+      }
+    }
+
+    &:focus:not(:user-invalid) {
       + .icon::before {
         --icon-color: hsl(97 53% 47%);
       }
