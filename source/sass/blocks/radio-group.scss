@@ -13,41 +13,41 @@
   }
 }
 
-.radio-group__label::before {
-  $bg-diameter: 14px;
-  $bg-radius: $bg-diameter / 2;
-  $bg-transparent-radius: $bg-radius + 1;
-  --bg-basic-h: 97deg;
-  --bg-basic-s: 53%;
-  --bg-basic-l: 47%;
-  --bg-basic-o: 0;
-  --border-color-h: 0deg;
-  --border-color-s: 0%;
-  --border-color-l: 80%;
-  --border-color-o: 1;
-  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
-  --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
-  content: "";
-  width: 30px;
-  height: 30px;
-  box-sizing: border-box;
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  margin-right: 20px;
-  background-image: radial-gradient(circle at 50%, var(--bg-basic) $bg-radius, transparent $bg-transparent-radius);
+.radio-group__label {
+  cursor: pointer;
 
-  @media (min-width: 768px) {
-    $bg-diameter: 18px;
-    $bg-radius: $bg-diameter / 2;
-    $bg-transparent-radius: $bg-radius + 1;
-    background-image: radial-gradient(circle at 50%, var(--bg-basic) $bg-radius, transparent $bg-transparent-radius);
-    width: 40px;
-    height: 40px;
+  &::before {
+    --border-color-h: 0deg;
+    --border-color-s: 0%;
+    --border-color-l: 80%;
+    --border-color-o: 1;
+    --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
+    content: "";
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    margin-right: 16px;
+    background-size: 0 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-size 0.2s;
+
+    @media (min-width: 768px) {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 
 .radio-group__input:checked + .radio-group__label::before {
-  --bg-basic-o: 1;
+  background-image: url("../../img/stack.svg#radiobutton-active");
+  background-size: 14px 14px;
+
+  @media (min-width: 768px) {
+    background-size: 18px 18px;
+  }
 }
 
 
