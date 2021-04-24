@@ -130,8 +130,26 @@
     --border-color-l: 80%;
   }
 
+
+  &:invalid {
+    --border-color-s: 100%;
+    --border-color-l: 75%;
+    box-shadow: 0 0 0 1px var(--border-color);
+  }
+
   &:focus {
     outline: none;
+    --border-color-l: 27%;
+    box-shadow: 0 0 0 1px var(--border-color);
+  }
+
+  &:invalid:not(:user-invalid) {
+    --border-color-s: 0%;
+    --border-color-l: 91%;
+    box-shadow: initial;
+  }
+
+  &:invalid:focus:not(:user-invalid) {
     --border-color-l: 27%;
     box-shadow: 0 0 0 1px var(--border-color);
   }
@@ -150,6 +168,13 @@
   &--phone {
     padding-right: 40px;
 
+
+    &:invalid {
+      + .icon::before {
+        --icon-color: hsl(0 100% 75%);
+      }
+    }
+
     &:focus {
       + .icon::before {
         --icon-color: hsl(97 53% 47%);
@@ -164,11 +189,6 @@
   }
 }
 
-.form.no-js .form__input:focus:invalid {
-  --border-color-s: 100%;
-  --border-color-l: 75%;
-  box-shadow: 0 0 0 1px var(--border-color);
-}
 
 .form__input[type="number"] {
   appearance: textfield;
