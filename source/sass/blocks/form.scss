@@ -1,6 +1,7 @@
 .form {
   display: grid;
   row-gap: 22px;
+  padding-top: 27px;
 
   @media (min-width: 768px) {
     row-gap: 65px;
@@ -49,10 +50,13 @@
   }
 
   &--radio {
-    row-gap: 13px;
+    justify-items: start;
   }
 
   &--checkbox {
+    justify-items: start;
+    row-gap: 10px;
+
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
       column-gap: 27px;
@@ -66,6 +70,9 @@
   }
 
   &--owner {
+    margin-top: 12px;
+    justify-items: initial;
+
     @media (min-width: 1280px) {
       grid-template-columns: 1fr 1fr;
       column-gap: 80px;
@@ -100,6 +107,7 @@
 
   &--with-icon {
     position: relative;
+    white-space: nowrap;
   }
 }
 
@@ -113,13 +121,52 @@
   --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
   border: 1px solid var(--border-color);
   margin-left: 15px;
-  padding: 13px 16px;
-  flex-grow: 1;
+  padding: 10px 15px;
+  width: 100%;
+  height: 46px;
   box-sizing: border-box;
+
+  &:hover {
+    --border-color-l: 80%;
+  }
+
+  &:focus {
+    --border-color-l: 27%;
+    box-shadow: 0 0 0 1px var(--border-color);
+  }
+
+  &:user-invalid {
+    --border-color-s: 100%;
+    --border-color-l: 75%;
+    box-shadow: 0 0 0 1px var(--border-color);
+  }
 
   @media (min-width: 768px) {
     padding: 10px 20px;
   }
+
+  &--email,
+  &--phone {
+    padding-right: 40px;
+
+    &:focus {
+      + .icon::before {
+        --icon-color: hsl(97 53% 47%);
+      }
+    }
+
+    &:user-invalid {
+      + .icon::before {
+        --icon-color: hsl(0 100% 75%);
+      }
+    }
+  }
+}
+
+.form.no-js .form__input:focus:invalid {
+  --border-color-s: 100%;
+  --border-color-l: 75%;
+  box-shadow: 0 0 0 1px var(--border-color);
 }
 
 .form__input[type="number"] {
@@ -149,13 +196,24 @@
   padding-left: 20px;
   padding-right: 20px;
   display: inline-block;
-
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
   --bg-basic-l: 100%;
   --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
   background-color: var(--bg-basic);
+
+  &--message {
+    margin-top: 3px;
+  }
+
+  &--accent {
+    margin-bottom: 31px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 57px;
+    }
+  }
 
   @media (min-width: 768px) {
     font-size: 36px;
@@ -164,10 +222,6 @@
     margin-bottom: 76px;
     padding-left: 40px;
     padding-right: 40px;
-
-    &--accent {
-      margin-bottom: 57px;
-    }
 
     br {
       display: none;
@@ -185,7 +239,7 @@
   line-height: 18 / 16 * 1;
   text-transform: uppercase;
   color: var(--basic);
-  margin: 0;
+  margin: 17px 0 0;
   padding: 10px 12px;
   width: 100%;
   height: 150px;
@@ -200,7 +254,8 @@
 
 .form__bottom {
   text-align: center;
-  padding-bottom: 32px;
+  padding-top: 14px;
+  padding-bottom: 15px;
 
   @media (min-width: 768px) {
     padding-bottom: 72px;
@@ -224,6 +279,8 @@
 }
 
 .form__note {
+  margin-top: 21px;
+
   @media (min-width: 1280px) {
     justify-self: start;
   }
