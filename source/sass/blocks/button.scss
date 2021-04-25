@@ -27,8 +27,19 @@
 
   &--accent {
     --basic-l: 27%;
+    --bg-basic-h: 0deg;
     --bg-basic-s: 0%;
     --bg-basic-l: 95%;
+
+    &:hover {
+      --bg-basic-s: 0%;
+      --bg-basic-l: 92%;
+    }
+
+    &:active {
+      --basic-o: 1;
+      --basic-o: 27%;
+    }
   }
 
   @media (min-width: 768px) {

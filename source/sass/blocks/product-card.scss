@@ -2,7 +2,7 @@
   display: grid;
   align-items: end;
   grid-template-columns: 1fr 1fr;
-  row-gap: 22px;
+  row-gap: 25px;
 
   @media (min-width: 768px) {
     position: relative;
@@ -38,7 +38,7 @@
   --border-color-l: 92%;
   --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
   border-top: 1px solid var(--border-color);
-  padding: 25px 20px;
+  padding: 20px 20px 24px;
 
   @media (min-width: 768px) {
     margin: 0;
@@ -76,6 +76,7 @@
 .product-card__link-image {
   order: -1;
   justify-self: center;
+  // align-self: end;
 
   @media (min-width: 768px) {
     position: absolute;
@@ -84,6 +85,12 @@
 }
 
 .product-card__image {
+  &--big {
+    position: relative;
+    bottom: -9px;
+    // margin-top: 10px;
+  }
+
   @media (min-width: 768px) {
     width: 163px;
     height: 169px;
@@ -128,7 +135,7 @@
 
   &--more {
     max-width: initial;
-    margin: 5px auto;
+    margin: 3px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,9 +168,9 @@
 .product-card__details {
   width: 100%;
   font-size: 12px;
-  line-height: 16 / 12 * 1;
+  line-height: 1.25;
   border-collapse: collapse;
-  margin-top: 10px;
+  margin-top: 13px;
 
   @media (min-width: 768px) {
     font-size: 16px;
@@ -226,7 +233,7 @@
     --bg-basic-h: 0deg;
     --bg-basic-s: 0%;
     --bg-basic-l: 95%;
-    margin-top: 20px;
+    margin-top: 15px;
 
     @media (min-width: 768px) {
       margin-top: auto;
