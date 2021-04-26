@@ -88,6 +88,15 @@
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
+  overflow: hidden;
+
+  &--close {
+    height: 0;
+
+    @media (min-width: 768px) {
+      height: auto;
+    }
+  }
 
   @media (min-width: 768px) {
     font-size: 18px;
