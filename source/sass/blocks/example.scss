@@ -72,6 +72,7 @@
   padding: 15px;
   min-width: 124px;
   box-sizing: border-box;
+  --border-color-l: 80%;
   --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
   border: 1px solid var(--border-color);
   border-radius: 3px;
@@ -132,52 +133,55 @@
   }
 }
 
-.example__description--bottom {
-  font-size: 12px;
-  line-height: 1;
-  padding: 0 15px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -15px;
-  text-align: center;
-  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
-  background-color: var(--bg-basic);
-
-  @media (min-width: 768px) {
-    --bg-basic-l: 100%;
-    font-size: 14px;
-    white-space: nowrap;
-    bottom: -5px;
-  }
-
-  @media (min-width: 1280px) {
-    --bg-basic-l: 92%;
-  }
-}
-
-.example__description--bottom br {
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
-.example__description--total {
-  font-family: var(--accent-font);
-  font-size: 14px;
-  line-height: 20 / 14 * 1;
-  text-transform: uppercase;
-  --basic-l: 0%;
-  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
-  color: var(--basic);
-
-  @media (min-width: 768px) {
-    font-size: 20px;
+.example__description {
+  &--bottom {
+    font-size: 12px;
     line-height: 1;
+    padding: 0 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    text-align: center;
+    --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+    background-color: var(--bg-basic);
+
+    @media (min-width: 768px) {
+      --bg-basic-l: 100%;
+      font-size: 14px;
+      white-space: nowrap;
+      padding: 0 10px;
+      bottom: -5px;
+    }
+
+    @media (min-width: 1280px) {
+      --bg-basic-l: 92%;
+    }
+
+    br {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
   }
 
-  @media (min-width: 1280px) {
-    justify-self: start;
+  &--total {
+    font-family: var(--accent-font);
+    font-size: 14px;
+    line-height: 20 / 14 * 1;
+    text-transform: uppercase;
+    --basic-l: 0%;
+    --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+    color: var(--basic);
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    @media (min-width: 1280px) {
+      justify-self: start;
+    }
   }
 }
 
