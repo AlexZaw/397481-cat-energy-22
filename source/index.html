@@ -8,13 +8,13 @@
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
-<body class="page__body page__index">
+<body class="page__body page__index js-enabled">
   <header class="page-header page__container">
     <div class="page-header__wrapper">
       <a class="link page-header__logo-image">
         <picture>
           <source media="(min-width: 1280px)" srcset="img/logos/logo-desktop.svg">
-          <source srcset="img/logos/logo-tablet.svg" media="(min-width: 768px)">
+          <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
           <img src="img/logos/logo-mobile.svg" alt="Логотип Cat Energy Стилизованый кот в маске" width="34" height="38">
         </picture>
       </a>
@@ -62,10 +62,13 @@
           </a>
           <div class="promo__image-wrapper">
             <picture>
-              <source media="(min-width: 1280px)" srcset="img/promo/index-can-desktop@1x.png">
-              <source srcset="img/promo/index-can-tablet@1x.png" media="(min-width: 768px)">
+              <source media="(min-width: 1280px)"
+                srcset="img/promo/index-can-desktop@1x.png 1x, img/promo/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/promo/index-can-tablet@1x.jpg 1x, img/promo/index-can-tablet@2x.jpg 2x">
               <img class="promo__image" src="img/promo/index-can-mobile@1x.png"
-                alt="Круглая картонная коробка в оранжевых тонах" width="280" height="270">
+                srcset="img/promo/index-can-mobile@2x.png 2x" alt="Круглая картонная коробка в оранжевых тонах"
+                width="280" height="270">
             </picture>
           </div>
         </div>
@@ -171,20 +174,35 @@
         <div class="example__slider slider">
           <ul class="slider__list">
             <li class="slider__item slider__item--before slider__item--current">
-              <!-- <noscript> -->
-              <picture>
-                <source media="(min-width: 1280px)" srcset="img/slider/image-cat-desktop@1x.png">
-                <source srcset="img/slider/image-cat-tablet@1x.png" media="(min-width: 768px)">
-                <img class="slider__image" src="img/slider/before-mobile@1x.png" alt="Кот с лишним весом" width="293"
-                  height="232">
-              </picture>
-              <!-- </noscript> -->
+              <figure>
+                <figcaption class="slider__image-caption">
+                  <noscript>
+                    Было:
+                  </noscript>
+                </figcaption>
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/slider/before@1x.png, img/slider/before@2x.png 2x">
+                  <img class="slider__image" src="img/slider/before-mobile@1x.png"
+                    srcset="img/slider/before-mobile@2x.png 2x" alt="Кот с лишним весом" width="293" height="232">
+                </picture>
+              </figure>
             </li>
-            <li class="slider__item slider__item--after" hidden>
-              <img src="img/slider/after-mobile@1x.png" alt="Поджарый кот">
+            <li class="slider__item slider__item--after">
+              <figure>
+                <figcaption class="slider__image-caption">
+                  <noscript>
+                    Стало:
+                  </noscript>
+                </figcaption>
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/slider/after@1x.png, img/slider/after@2x.png 2x">
+                  <img class="slider__image" src="img/slider/after-mobile@1x.png"
+                    srcset="img/slider/after-mobile@2x.png 2x" alt="Поджарый кот" width="251" height="240">
+                </picture>
+              </figure>
             </li>
           </ul>
-          <div class="example__control slider__control" hidden>
+          <div class="example__control slider__control slider__control--hide" hidden>
             <button class="slider__button" type="button">
               Было
             </button>
@@ -216,6 +234,15 @@
       </div>
     </div>
     <div class="contacts__map">
+      <noscript class="content">
+        <picture>
+          <source media="(min-width: 1280px)"
+            srcset="img/common/location-desktop@1x.png 1x, img/common/location-desktop@2x.png 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/common/location-tablet@1x.png 1x, img/common/location-tablet@2x.png 2x">
+          <img src="img/common/location-mobile@1x.png" srcset="img/common/location-mobile@2x.png 2x" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
+      </noscript>
       <iframe aria-labelledby="address"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.770648107317!2d30.313133954838005!3d59.937241831231795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616848881644!5m2!1sru!2sru"
         style="border: 0;

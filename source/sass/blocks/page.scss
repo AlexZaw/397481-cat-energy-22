@@ -42,6 +42,10 @@
       background-image: url("../../img/promo/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/promo/index-background-desktop@2x.jpg");
+      }
     }
   }
 }

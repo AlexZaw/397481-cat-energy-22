@@ -37,6 +37,10 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/promo/index-background-mobile@2x.jpg");
+  }
 }
 
 .promo::after {
