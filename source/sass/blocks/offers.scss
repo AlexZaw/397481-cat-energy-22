@@ -1,5 +1,9 @@
 .offers {
   padding-top: 22px;
+
+  @media (min-width: 768px) {
+    padding-top: 0;
+  }
 }
 
 .offers__list {
@@ -8,6 +12,10 @@
   padding: 0;
   display: grid;
   row-gap: 20px;
+
+  @media (min-width: 768px) {
+    row-gap: 30px;
+  }
 
   @media (min-width: 1280px) {
     grid-template-columns: 1fr 1fr;
@@ -29,10 +37,10 @@
   @media (min-width: 768px) {
     padding-top: 77px;
     padding-left: 52px;
-    padding-bottom: 55px;
+    padding-bottom: 61px;
     display: grid;
     row-gap: 24px;
-    grid-template-columns: 1fr 268px;
+    grid-template-columns: 1fr 264px;
     grid-template-rows: repeat(3, max-content);
   }
 
@@ -53,10 +61,13 @@
 .offers__item .icon--bg-round {
   width: 50px;
   height: 50px;
+  margin-left: 3px;
 
   @media (min-width: 768px) {
     width: 200px;
     height: 200px;
+    margin-top: -5px;
+    margin-left: -20px;
   }
 
   @media (min-width: 1280px) {
@@ -69,7 +80,7 @@
   @media (min-width: 768px) {
     width: 140px;
     height: 192px;
-    margin-top: -19px;
+    margin-top: -15px;
   }
 
   @media (min-width: 1280px) {
@@ -98,7 +109,7 @@
   line-height: 37 / 24 * 1;
   text-transform: uppercase;
   margin-top: 0;
-  margin-left: 20px;
+  margin-left: 19px;
   margin-bottom: 0;
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
@@ -127,6 +138,13 @@
   @media (min-width: 768px) {
     margin: 0;
     border: none;
+    line-height: 24 /16 * 1;
+  }
+
+  br {
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }
 
@@ -151,13 +169,17 @@
     content: "";
     width: 32px;
     height: 12px;
-    margin-left: 15px;
+    margin-left: 17px;
     display: inline-block;
     background-image: url("../../img/stack.svg#offers-arrow");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -8px center;
     transition: background-position 0.2s;
+
+    @media (min-width: 768px) {
+      margin-left: 25px;
+    }
   }
 
   &:hover {
@@ -169,7 +191,7 @@
   @media (min-width: 768px) {
     font-size: 20px;
     grid-column: 1;
-    margin-top: 24px;
+    margin-top: 13px;
   }
 
   @media (min-width: 1280px) {
