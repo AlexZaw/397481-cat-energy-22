@@ -1,6 +1,11 @@
 .description {
-  padding-top: 30px;
+  padding-top: 31px;
   padding-bottom: 43px;
+
+  @media (min-width: 768px) {
+    padding-top: 45px;
+    padding-bottom: 46px;
+  }
 }
 
 .description__title {
@@ -12,8 +17,8 @@
 
 .description__list {
   list-style: none;
-  margin: 0;
-  padding: 27px 0 0;
+  margin: 40px 0 0;
+  padding: 0;
   display: grid;
   row-gap: 20px;
 
@@ -23,6 +28,7 @@
     column-gap: 60px;
     row-gap: 37px;
     counter-reset: description;
+    margin-top: 32px;
   }
 
   @media (min-width: 1280px) {
@@ -57,7 +63,7 @@
       content: counter(description);
       position: absolute;
       top: 0;
-      left: 126px;
+      left: 115px;
       z-index: -1;
     }
   }

@@ -16,29 +16,26 @@
     border: none;
     width: auto;
     flex-grow: 1;
+    padding: 0;
+    column-gap: 30px;
 
-    .icon--vk {
-      @media (min-width: 768px) {
-        width: 30px;
-        height: 22px;
-      }
+    .icon--vk::before {
+      width: 29px;
+      height: 17px;
+    }
 
-      .icon--inst {
-        @media (min-width: 768px) {
-          width: 23px;
-          height: 23px;
-        }
-      }
+    .icon--inst::before {
+      width: 23px;
+      height: 23px;
+    }
 
-      .icon--fb {
-        @media (min-width: 768px) {
-          width: 28px;
-          height: 33px;
-        }
-      }
+    .icon--fb::before {
+      width: 13px;
+      height: 27px;
     }
   }
 }
+
 
 .social__link {
   ::before {
