@@ -12,7 +12,7 @@
   }
 
   @media (min-width: 1280px) {
-    padding-bottom: 139px;
+    padding-bottom: 132px;
   }
 }
 
@@ -74,8 +74,8 @@
   }
 
   @media (min-width: 1280px) {
-    margin-top: 86px;
-    margin-bottom: 21px;
+    margin-top: 79px;
+    margin-left: 80px;
   }
 }
 
@@ -87,7 +87,7 @@
   margin-bottom: 0;
 
   @media (min-width: 768px) {
-    margin-left: 87px;
+    margin-left: 80px;
     margin-top: 41px;
   }
 }
@@ -104,7 +104,8 @@
 
   @media (min-width: 1280px) {
     position: absolute;
-    top: 4px;
+    margin-top: 0;
+    top: -3px;
     left: 50%;
     transform: translateX(-162px);
   }
@@ -140,6 +141,7 @@
   }
 
   @media (min-width: 1280px) {
-    margin-top: 31px;
+    margin-top: 51px;
+    margin-left: 80px;
   }
 }
