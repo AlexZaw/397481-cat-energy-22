@@ -67,6 +67,7 @@
 
 .promo__title {
   margin-top: 25px;
+  z-index: 1;
 
   @media (min-width: 768px) {
     margin-left: 87px;
@@ -85,6 +86,7 @@
   text-transform: uppercase;
   margin-top: 26px;
   margin-bottom: 0;
+  z-index: 1;
 
   @media (min-width: 768px) {
     margin-left: 80px;
