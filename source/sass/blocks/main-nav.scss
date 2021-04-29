@@ -144,6 +144,10 @@
       bottom: -9px;
       --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
       background-color: var(--bg-basic);
+
+      @media (min-width: 1280px) {
+        bottom: -6px;
+      }
     }
   }
 
