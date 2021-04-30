@@ -1,10 +1,11 @@
 .form {
   display: grid;
   row-gap: 22px;
-  padding-top: 27px;
+  padding-top: 39px;
 
   @media (min-width: 768px) {
-    row-gap: 65px;
+    row-gap: 55px;
+    padding-top: 65px;
   }
 
 
@@ -21,7 +22,7 @@
   row-gap: 22px;
 
   @media (min-width: 768px) {
-    row-gap: 72px;
+    row-gap: 71px;
   }
 
   @media (min-width: 1280px) {
@@ -51,6 +52,10 @@
 
   &--radio {
     justify-items: start;
+
+    @media (min-width: 768px) {
+      row-gap: 13px;
+    }
   }
 
   &--checkbox {
@@ -59,19 +64,25 @@
 
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
-      column-gap: 27px;
+      column-gap: 53px;
       row-gap: 32px;
+      margin-top: 55px;
     }
 
     @media (min-width: 1280px) {
       grid-template-columns: repeat(4, 221px);
       column-gap: 104px;
+      // margin-top: 62px;
     }
   }
 
   &--owner {
     margin-top: 12px;
     justify-items: initial;
+
+    @media (min-width: 768px) {
+      margin-top: 77px;
+    }
 
     @media (min-width: 1280px) {
       grid-template-columns: 1fr 1fr;
@@ -162,6 +173,7 @@
 
   @media (min-width: 768px) {
     padding: 10px 20px;
+    height: 52px;
   }
 
   &--email,
@@ -244,7 +256,7 @@
     margin-bottom: 31px;
 
     @media (min-width: 768px) {
-      margin-bottom: 57px;
+      margin-bottom: 0;
     }
   }
 
@@ -252,7 +264,7 @@
     font-size: 36px;
     line-height: 1;
     margin-left: -40px;
-    margin-bottom: 76px;
+    margin-bottom: 0;
     padding-left: 40px;
     padding-right: 40px;
 
@@ -288,7 +300,11 @@
   }
 
   @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1.5;
     height: 174px;
+    margin-top: 71px;
+    padding: 10px 19px;
   }
 }
 
@@ -298,10 +314,11 @@
   padding-bottom: 15px;
 
   @media (min-width: 768px) {
+    padding-top: 0;
     padding-bottom: 72px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 27px;
+    column-gap: 57px;
     justify-items: start;
     align-items: center;
   }
@@ -309,6 +326,8 @@
   @media (min-width: 1280px) {
     column-gap: 80px;
     justify-items: stretch;
+    padding-top: 5px;
+    padding-bottom: 82px;
   }
 }
 
@@ -320,6 +339,11 @@
 
 .form__note {
   margin-top: 21px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
   @media (min-width: 1280px) {
     justify-self: start;
