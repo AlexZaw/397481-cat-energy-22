@@ -17,6 +17,13 @@
     background-repeat: no-repeat;
     background-image: url("../../img/stack.svg#check");
     transition: background-size 0.2s;
+    box-sizing: border-box;
+
+    @media (min-width: 768px) {
+      width: 40px;
+      height: 40px;
+      margin-right: 18px;
+    }
   }
 }
 
