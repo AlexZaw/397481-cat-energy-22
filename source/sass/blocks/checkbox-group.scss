@@ -32,6 +32,15 @@
   outline-offset: 2px;
 }
 
+.checkbox-group__input:focus:not(:focus-visible) + label::before {
+  outline: none;
+}
+
+.checkbox-group__input:focus-visible + label::before {
+  outline: 2px solid hsl(0, 0%, 27%);
+  outline-offset: 2px;
+}
+
 .checkbox-group__input:checked + .checkbox-group__label::before {
   background-size: 18px 14px;
 }

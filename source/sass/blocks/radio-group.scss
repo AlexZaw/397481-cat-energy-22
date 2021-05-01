@@ -44,6 +44,15 @@
   outline-offset: 2px;
 }
 
+.radio-group__input:focus:not(:focus-visible) + label::before {
+  outline: none;
+}
+
+.radio-group__input:focus-visible + label::before {
+  outline: 2px solid hsl(0, 0%, 27%);
+  outline-offset: 2px;
+}
+
 .radio-group__input:checked + .radio-group__label::before {
   background-image: url("../../img/stack.svg#radiobutton-active");
   background-size: 14px 14px;
