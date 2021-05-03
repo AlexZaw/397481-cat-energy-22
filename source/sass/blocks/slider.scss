@@ -43,23 +43,21 @@
   }
 
   &--before {
-    width: 50%;
-    z-index: 1;
+    @media (min-width: 768px) {
+      z-index: 1;
 
-    img {
-      max-width: none;
+      img {
+        max-width: none;
+      }
     }
   }
 
   &--after {
-    width: 50%;
-    right: 0;
+    @media (min-width: 768px) {
+      right: 0;
 
-
-    img {
-      max-width: none;
-
-      @media (min-width: 768px) {
+      img {
+        max-width: none;
         height: 100%;
         position: absolute;
         top: 0;

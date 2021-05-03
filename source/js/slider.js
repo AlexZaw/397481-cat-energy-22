@@ -7,6 +7,7 @@ const afterSlide = document.querySelector('.slider__item--after');
 const sliderControl = document.querySelector('.slider__control');
 const sliderBar = document.querySelector('.slider__bar');
 const sliderThumb = document.querySelector('.slider__thumb');
+
 beforeBtn.addEventListener('click', function () {
   if (window.innerWidth < 768) {
     afterSlide.classList.remove('slider__item--current');
@@ -18,6 +19,7 @@ beforeBtn.addEventListener('click', function () {
     changeSlide(0);
   }
 });
+
 afterBtn.addEventListener('click', function () {
   if (window.innerWidth < 768) {
     beforeSlide.classList.remove('slider__item--current');
@@ -29,6 +31,21 @@ afterBtn.addEventListener('click', function () {
   }
 });
 
+sliderControl.addEventListener('pointerdown', function() {
+  checkCoords(event.pageX);
+  sliderControl.addEventListener('pointermove',trackThumb)
+}, false);
+
+window.addEventListener('pointerup', function(){
+  sliderControl.removeEventListener('pointermove', trackThumb)
+});
+
+window.addEventListener('resize', function(){
+  if (window.innerWidth < 768){
+    beforeSlide.style.width = 'auto';
+    afterSlide.style.width = 'auto';
+  }
+})
 function checkCoords(coords) {
   let percents;
   let sliderBarStart = sliderBar.offsetLeft;
@@ -37,26 +54,18 @@ function checkCoords(coords) {
   if (coords >= sliderBarStart && coords <= sliderBarEnd) {
     percents = Math.round((coords - sliderBarStart) * 100 / sliderBarWidth);
   moveThumb(percents);
-
   }
 }
+
 function moveThumb(percents) {
   sliderThumb.style.left = percents + '%';
   changeSlide(percents);
 }
+
 function changeSlide(percents) {
   beforeSlide.style.width = 100 - percents + "%"
   afterSlide.style.width = percents + "%"
 }
-
-sliderControl.addEventListener('pointerdown', function() {
-  checkCoords(event.pageX);
-  sliderControl.addEventListener('pointermove',trackThumb)
-}, false);
-
-window.addEventListener('pointerup', function(){
-  sliderControl.removeEventListener('pointermove', trackThumb)
-})
 
 function trackThumb(e){
     checkCoords(e.pageX)
