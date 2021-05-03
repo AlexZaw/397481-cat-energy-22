@@ -1,3 +1,13 @@
+.contacts {
+  @media (min-width: 768px) {
+    padding-top: 41px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 49px;
+  }
+}
+
 .contacts__wrapper {
   --bg-basic-h: 0deg;
   --bg-basic-s: 0%;
@@ -61,7 +71,7 @@
     position: absolute;
     top: 95px;
     left: 0;
-    padding: 60px 74px;
+    padding: 62px 74px 58px;
     column-gap: 80px;
   }
 }
