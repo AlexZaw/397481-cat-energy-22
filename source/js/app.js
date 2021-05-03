@@ -1,10 +1,13 @@
-let menuToggler = document.querySelector('.main-nav__toggle');
-let mainMenu = document.querySelector('.main-nav__list');
+document.body.classList.add('js-enabled');
+document.querySelector('.contacts__map iframe').removeAttribute('hidden');
+const menuToggler = document.querySelector('.main-nav__toggle');
+const mainMenu = document.querySelector('.main-nav__list');
 menuToggler.classList.remove('main-nav__toggle--hidden');
 mainMenu.classList.add('main-nav__list--close');
 
-menuToggler.addEventListener('click', menuToggle);
+menuToggler.addEventListener('click', showHideMenu);
 
-function menuToggle() {
+function showHideMenu() {
+  menuToggler.classList.toggle('main-nav__toggle--close')
     mainMenu.classList.toggle('main-nav__list--close');
 }
