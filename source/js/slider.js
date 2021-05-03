@@ -29,23 +29,35 @@ afterBtn.addEventListener('click', function () {
   }
 });
 
-sliderControl.addEventListener('mousedown', getCoords);
-
-function getCoords(e) {
-  let coords;
+function checkCoords(coords) {
+  let percents;
   let sliderBarStart = sliderBar.offsetLeft;
-  sliderBarWidth = sliderBar.offsetWidth;
+  let sliderBarWidth = sliderBar.offsetWidth;
   let sliderBarEnd = sliderBarWidth + sliderBarStart;
-  if (e.pageX >= sliderBarStart && e.pageX <= sliderBarEnd) {
-    coords = Math.round((e.pageX - sliderBarStart) * 100 / sliderBarWidth);
-    moveThumb(coords);
+  if (coords >= sliderBarStart && coords <= sliderBarEnd) {
+    percents = Math.round((coords - sliderBarStart) * 100 / sliderBarWidth);
+  moveThumb(percents);
+
   }
 }
-function moveThumb(percent){
-  sliderThumb.style.left = percent + '%';
-  changeSlide(percent);
+function moveThumb(percents) {
+  sliderThumb.style.left = percents + '%';
+  changeSlide(percents);
 }
-function changeSlide(percent) {
-  beforeSlide.style.width = 100 - percent + "%"
-  afterSlide.style.width = percent + "%"
+function changeSlide(percents) {
+  beforeSlide.style.width = 100 - percents + "%"
+  afterSlide.style.width = percents + "%"
+}
+
+sliderControl.addEventListener('pointerdown', function() {
+  checkCoords(event.pageX);
+  sliderControl.addEventListener('pointermove',trackThumb)
+}, false);
+
+window.addEventListener('pointerup', function(){
+  sliderControl.removeEventListener('pointermove', trackThumb)
+})
+
+function trackThumb(e){
+    checkCoords(e.pageX)
 }
