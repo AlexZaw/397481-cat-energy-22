@@ -56,7 +56,7 @@ const copyImages = () => {
     "source/img/**/*.{jpg,png,svg}",
     "!source/img/icons/*"
   ])
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build/img"));
 }
 exports.copyImages = copyImages;
 
