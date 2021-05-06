@@ -55,9 +55,7 @@ const copyImages = () => {
   return gulp.src([
     "source/img/**/*.{jpg,png,svg}",
     "!source/img/icons/*"
-  ], {
-    base: "source"
-  })
+  ])
     .pipe(gulp.dest("build"));
 }
 exports.copyImages = copyImages;
@@ -68,9 +66,7 @@ const optimizeImages = () => {
   return gulp.src([
     "source/img/**/*.{jpg,png,svg}",
     "!source/img/icons/*"
-  ], {
-    base: "source"
-  })
+  ])
     .pipe(imagemin([
       imagemin.mozjpeg({ quality: 75, progressive: true }),
       imagemin.optipng({ optimizationLevel: 3 }),
@@ -81,15 +77,17 @@ const optimizeImages = () => {
         ]
       })
     ]))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build/img"));
 }
 exports.optimizeImages = optimizeImages;
 
 // Create WebP
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(plumber())
+  return gulp.src([
+    "source/img/**/*.{jpg,png}",
+    "!source/img/favicons/*"
+  ])
     .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("build/img"));
 }
