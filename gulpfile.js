@@ -24,6 +24,7 @@ const clean = () => {
 // Svg stack
 
 const svgstack = () => {
+  del("build/img/stack.svg");
   return gulp.src("source/img/icons/**/*.svg")
     .pipe(plumber())
     .pipe(svgsprite({
@@ -32,7 +33,7 @@ const svgstack = () => {
       }
     }))
     .pipe(rename("stack.svg"))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 }
 exports.svgstack = svgstack;
 
@@ -149,13 +150,19 @@ const server = (done) => {
 }
 exports.server = server;
 
+//Reload
+
+const reload = (done) => {
+  sync.reload();
+  done();
+}
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/img/icons/**/*.svg", gulp.series("svgstack"));
-  gulp.watch("source/*.html").on("change", sync.reload);
-  gulp.watch("source/js/*.js").on("change", sync.reload);
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
+  gulp.watch("source/img/icons/**/*.svg", gulp.series(svgstack, reload));
+  gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/js/*.js", gulp.series(scripts, reload));
 }
 
 // Build
