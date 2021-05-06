@@ -218,10 +218,21 @@
     <div class="contacts__map">
       <noscript class="content">
         <picture>
+          <source type="image/webp" media="(min-width: 1280px)"
+          srcset="img/common/location-desktop@1x.webp 1x,
+          img/common/location-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+          srcset="img/common/location-tablet@1x.webp 1x,
+          img/common/location-tablet@2x.webp 2x">
+          <source type="image/webp"
+          srcset="img/common/location-mobile@1x.webp 1x,
+          img/common/location-mobile@2x.webp 2x">
           <source media="(min-width: 1280px)"
-          srcset="img/common/location-desktop@1x.png 1x, img/common/location-desktop@2x.png 2x">
+            srcset="img/common/location-desktop@1x.png 1x,
+            img/common/location-desktop@2x.png 2x">
           <source media="(min-width: 768px)"
-          srcset="img/common/location-tablet@1x.png 1x, img/common/location-tablet@2x.png 2x">
+            srcset="img/common/location-tablet@1x.png 1x,
+            img/common/location-tablet@2x.png 2x">
           <img src="img/common/location-mobile@1x.png" srcset="img/common/location-mobile@2x.png 2x" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </picture>
       </noscript>
