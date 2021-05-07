@@ -1,5 +1,11 @@
-.page__body {
+.page {
+  height: 100%;
+}
 
+.page__body {
+  height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content min-content;
   margin: 0;
   font-family: var(--main-font);
   font-size: 14px;
