@@ -1,5 +1,5 @@
 document.body.classList.add('js-enabled');
-document.querySelector('.contacts__map iframe').removeAttribute('hidden');
+document.querySelector('.map').removeAttribute('hidden');
 const menuToggler = document.querySelector('.main-nav__toggle');
 const mainMenu = document.querySelector('.main-nav__list');
 menuToggler.classList.remove('main-nav__toggle--hidden');

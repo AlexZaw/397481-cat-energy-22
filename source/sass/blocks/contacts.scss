@@ -71,6 +71,7 @@
     position: absolute;
     top: 95px;
     left: 0;
+    z-index: 1;
     padding: 62px 74px 58px;
     column-gap: 80px;
   }
@@ -96,12 +97,4 @@
 
 .contacts__map img {
   width: 100%;
-}
-
-.contacts iframe {
-  vertical-align: middle;
-
-  @media (min-width: 768px) {
-    height: 400px;
-  }
 }

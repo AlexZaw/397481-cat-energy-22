@@ -87,7 +87,9 @@ exports.optimizeImages = optimizeImages;
 const createWebp = () => {
   return gulp.src([
     "source/img/**/*.{jpg,png}",
-    "!source/img/favicons/*"
+    "!source/img/favicons/*",
+    "!source/img/common/map-pin.png"
+
   ])
     .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("build/img"));
