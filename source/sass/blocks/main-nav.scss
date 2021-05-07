@@ -95,7 +95,7 @@
     line-height: 24 / 18 * 1;
     display: grid;
     grid-template-columns: repeat(3, max-content);
-    column-gap: 35px;
+    column-gap: 25px;
   }
 
   @media (min-width: 1280px) {
@@ -115,7 +115,7 @@
   @media (min-width: 768px) {
     border: none;
     margin: auto;
-    padding: 0;
+    padding: 4px;
   }
 }
 
