@@ -3,15 +3,15 @@ let requiredFields = document.querySelectorAll('.required');
 requiredFields.forEach((item) => {
   item.removeAttribute('required')
 });
-forms.forEach((item) => {
-  item.addEventListener('submit', checkForm)
+forms.forEach((form) => {
+  form.addEventListener('submit', checkForm)
 });
 
 function checkForm(evt) {
-  requiredFields.forEach((item) => {
-    if (item.value == '') {
+  requiredFields.forEach((field) => {
+    if (field.value == '') {
       evt.preventDefault();
-      item.setAttribute('required', true);
+      field.setAttribute('required', true);
     }
   });
 }
