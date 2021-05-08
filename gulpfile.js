@@ -130,18 +130,22 @@ exports.styles = styles;
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
+    .pipe(sourcemap.init())
     .pipe(terser())
     .pipe(rename(function (path) {
       path.basename += '.min';
     }))
+    .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('build/js'))
 
 }
 exports.scripts = scripts;
 const concatJs = () => {
   return gulp.src('source/js/concat/*.js')
+    .pipe(sourcemap.init())
   .pipe(concat('app.min.js'))
   .pipe(terser())
+  .pipe(sourcemap.write('.'))
   .pipe(gulp.dest('build/js'));
 }
 
