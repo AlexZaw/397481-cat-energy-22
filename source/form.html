@@ -72,13 +72,13 @@
               <p class="form__item">
                 <label class="form__label">
                   Имя:<sup aria-hidden="true">*</sup>
-                  <input class="form__input" type="text" name="cat-name" placeholder="Барсик" required>
+                  <input class="form__input required" type="text" name="cat-name" placeholder="Барсик" required>
                 </label>
               </p>
               <p class="form__item">
                 <label class="form__label">
                   Вес&nbsp;(кг):<sup aria-hidden="true">*</sup>
-                  <input class="form__input" type="number" name="cat-weight" placeholder="7" required>
+                  <input class="form__input required" type="number" name="cat-weight" placeholder="7" required>
                 </label>
               </p>
               <p class="form__item">
@@ -121,14 +121,14 @@
         <div class="cross-line cross-line--owner">
           <fieldset class="page__container page__container--form">
             <legend class="form__title">
-                Контактные данные<br aria-hidden="true">
+                Контактные данные&nbsp;<br aria-hidden="true">
                 (владельца кота)
             </legend>
             <div class="form__list form__list--owner">
               <p class="form__item">
                 <label class="form__label form__label--with-icon">
                   E-mail:<sup aria-hidden="true">*</sup>
-                  <input class="form__input form__input--email" type="email" name="client-email"
+                  <input class="form__input form__input--email required" type="email" name="client-email"
                     placeholder="kuklachev@gmail.com" required>
                   <span class="icon icon--email form__icon"></span>
                 </label>
@@ -136,7 +136,7 @@
               <p class="form__item">
                 <label class="form__label form__label--with-icon">
                   Телефон:<sup aria-hidden="true">*</sup>
-                  <input class="form__input form__input--phone" type="tel" name="client-phone"
+                  <input class="form__input form__input--phone required" type="tel" name="client-phone"
                     placeholder="8 (960) 900-60-90" required>
                   <span class="icon icon--phone form__icon"></span>
                 </label>
@@ -280,6 +280,7 @@
     </div>
   </footer>
   <script src="js/app.min.js"></script>
+  <script src="js/form.min.js"></script>
   <script src="js/map.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGR_h3dKcsytT9Do1RsEg1E_suSNWEugA&callback=initMap"></script>
 </body>
