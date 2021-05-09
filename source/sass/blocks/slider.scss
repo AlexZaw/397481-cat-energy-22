@@ -122,7 +122,6 @@
   --basic-l: 0%;
   --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
   color: var(--basic);
-  cursor: pointer;
 
   @media (min-width: 768px) {
     font-size: 20px;

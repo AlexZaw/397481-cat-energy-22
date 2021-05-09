@@ -140,13 +140,14 @@ const scripts = () => {
 
 }
 exports.scripts = scripts;
+
 const concatJs = () => {
   return gulp.src('source/js/concat/*.js')
     .pipe(sourcemap.init())
-  .pipe(concat('app.min.js'))
-  .pipe(terser())
-  .pipe(sourcemap.write('.'))
-  .pipe(gulp.dest('build/js'));
+    .pipe(concat('app.min.js'))
+    .pipe(terser())
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('build/js'));
 }
 
 // Server
