@@ -8,44 +8,21 @@ const sliderControl = document.querySelector('.slider__control');
 const sliderBar = document.querySelector('.slider__bar');
 const sliderThumb = document.querySelector('.slider__thumb');
 
-beforeBtn.addEventListener('click', function () {
+beforeBtn.addEventListener('click', handleSlider);
+afterBtn.addEventListener('click', handleSlider);
+sliderControl.addEventListener('pointerdown', handleSlider);
+
+window.addEventListener('pointerup', function () {
+  sliderControl.removeEventListener('pointermove', handleSlider)
+});
+
+window.addEventListener('resize', function () {
   if (window.innerWidth < 768) {
-    afterSlide.classList.remove('slider__item--current');
-    beforeSlide.classList.add('slider__item--current');
-    sliderThumb.style.marginLeft = '0';
-  }
-  else {
-    sliderThumb.style.left = 0;
-    changeSlide(0);
-  }
-});
-
-afterBtn.addEventListener('click', function () {
-  if (window.innerWidth < 768) {
-    beforeSlide.classList.remove('slider__item--current');
-    afterSlide.classList.add('slider__item--current');
-    sliderThumb.style.marginLeft = 'auto';
-  } else {
-    sliderThumb.style.left = '100%';
-    changeSlide(100);
-  }
-});
-
-sliderControl.addEventListener('pointerdown', function() {
-  checkCoords(event.pageX);
-  sliderControl.addEventListener('pointermove',trackThumb)
-}, false);
-
-window.addEventListener('pointerup', function(){
-  sliderControl.removeEventListener('pointermove', trackThumb)
-});
-
-window.addEventListener('resize', function(){
-  if (window.innerWidth < 768){
     beforeSlide.style.width = 'auto';
     afterSlide.style.width = 'auto';
   }
 })
+
 function checkCoords(coords) {
   let percents;
   let sliderBarStart = sliderBar.offsetLeft;
@@ -53,20 +30,46 @@ function checkCoords(coords) {
   let sliderBarEnd = sliderBarWidth + sliderBarStart;
   if (coords >= sliderBarStart && coords <= sliderBarEnd) {
     percents = Math.round((coords - sliderBarStart) * 100 / sliderBarWidth);
-  moveThumb(percents);
+    return percents;
+  }
+}
+
+function handleSlider(event) {
+  if (event.target == beforeBtn) {
+    moveThumb(0);
+    changeSlide(0)
+  } else if (event.target == afterBtn) {
+    moveThumb(100);
+    changeSlide(100)
+  }
+  else {
+    sliderControl.addEventListener('pointermove', handleSlider);
+    moveThumb(checkCoords(event.pageX));
+    changeSlide(checkCoords(event.pageX));
   }
 }
 
 function moveThumb(percents) {
-  sliderThumb.style.left = percents + '%';
-  changeSlide(percents);
+  if (window.innerWidth < 768) {
+    let margin;
+    percents < 50 ? margin = '0' : margin = 'auto';
+    sliderThumb.style.marginLeft = margin;
+  } else {
+    sliderThumb.style.left = percents + '%';
+  }
 }
 
 function changeSlide(percents) {
-  beforeSlide.style.width = 100 - percents + "%"
-  afterSlide.style.width = percents + "%"
-}
-
-function trackThumb(e){
-    checkCoords(e.pageX)
+  if (window.innerWidth < 768) {
+    if (percents < 50) {
+      afterSlide.classList.remove('slider__item--current');
+      beforeSlide.classList.add('slider__item--current');
+    } else {
+      beforeSlide.classList.remove('slider__item--current');
+      afterSlide.classList.add('slider__item--current');
+    }
+  } else {
+    beforeSlide.style.width = 100 - percents + "%"
+    afterSlide.style.width = percents + "%"
+  }
 }
