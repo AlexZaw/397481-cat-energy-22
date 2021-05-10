@@ -9,6 +9,10 @@
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff" crossorigin>
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
@@ -205,7 +209,7 @@
                   srcset="img/slider/before@1x.png,
                   img/slider/before@2x.png 2x">
                   <img class="slider__image" src="img/slider/before-mobile@1x.png"
-                  srcset="img/slider/before-mobile@2x.png 2x" alt="Кот с лишним весом" width="293" height="232">
+                  srcset="img/slider/before-mobile@2x.png 2x" alt="Кот с лишним весом" width="293" height="232" loading="lazy">
                 </picture>
               </figure>
             </li>
@@ -226,7 +230,7 @@
                   srcset="img/slider/after@1x.png,
                   img/slider/after@2x.png 2x">
                   <img class="slider__image" src="img/slider/after-mobile@1x.png"
-                    srcset="img/slider/after-mobile@2x.png 2x" alt="Поджарый кот" width="251" height="232">
+                    srcset="img/slider/after-mobile@2x.png 2x" alt="Поджарый кот" width="251" height="232" loading="lazy">
                 </picture>
               </figure>
             </li>
@@ -290,7 +294,7 @@
     <div class="page__container">
       <div class="main-footer__wrapper">
         <a class="link main-footer__logo-image main-footer__logo-wrapper">
-          <img src="img/logos/footer-logo.svg" width="128" height="24" alt="Текстовый логотип. Надпись Cat Energy">
+          <img src="img/logos/footer-logo.svg" width="128" height="24" alt="Текстовый логотип. Надпись Cat Energy" loading="lazy">
         </a>
         <ul class="social page__list">
           <li>
@@ -326,8 +330,8 @@
       </div>
     </div>
   </footer>
-  <script src="js/app.min.js"></script>
-  <script src="js/slider.min.js"></script>
+  <script defer src="js/app.min.js"></script>
+  <script defer src="js/slider.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGR_h3dKcsytT9Do1RsEg1E_suSNWEugA&callback=initMap"></script>
 </body>
 
