@@ -177,7 +177,7 @@ const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/img/icons/**/*.svg', gulp.series(svgstack, reload));
   gulp.watch('source/*.html', gulp.series(html, reload));
-  gulp.watch('source/js/**/*.js', gulp.series(scripts, reload));
+  gulp.watch('source/js/**/*.js', gulp.series(scripts, concatJs, reload));
 }
 
 // Build
@@ -196,6 +196,27 @@ const build = gulp.series(
   )
 );
 exports.build = build;
+
+// Production with server
+
+const prod = gulp.series(
+  clean,
+  svgstack,
+  gulp.parallel(
+    copy,
+    optimizeImages,
+    createWebp,
+    html,
+    styles,
+    scripts,
+    concatJs
+  ),
+  gulp.series(
+    server,
+    watcher
+  )
+);
+exports.prod = prod;
 
 //Default
 
