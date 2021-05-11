@@ -9,6 +9,7 @@
 
   @media (min-width: 1280px) {
     padding-top: 73px;
+    padding-bottom: 46px;
   }
 }
 
@@ -47,10 +48,12 @@
   grid-template-columns: 60px 1fr;
   column-gap: 20px;
   box-sizing: border-box;
+  align-items: center;
 
   @media (min-width: 768px) {
     display: flex;
     flex-direction: column;
+    align-items: initial;
     min-height: 280px;
     padding-top: 40px;
     padding-bottom: 57px;

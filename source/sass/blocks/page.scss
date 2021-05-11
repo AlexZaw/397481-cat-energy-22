@@ -3,7 +3,7 @@
 }
 
 .page__body {
-  height: 100%;
+  min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content min-content;
   margin: 0;
@@ -47,6 +47,8 @@
       background-color: var(--bg-basic);
       background-image: url("../../img/promo/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
+      background-position: left center;
+      background-size: cover;
       z-index: -1;
 
       @media (min-resolution: 2dppx) {
