@@ -1,3 +1,4 @@
+document.querySelector('.map').removeAttribute('hidden');
 let map, icon;
 function initMap() {
   map = new google.maps.Map(document.querySelector('.map'),{
