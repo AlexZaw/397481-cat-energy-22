@@ -106,6 +106,13 @@ const html = () => {
     .pipe(gulp.dest('build'));
 }
 
+// HTML copy
+
+const htmlCopy = () => {
+  return gulp.src('source/**/*.html')
+    .pipe(gulp.dest('build'));
+}
+
 // Dev styles
 
 const devStyles = () => {
@@ -250,7 +257,7 @@ exports.default = gulp.series(
     copy,
     copyImages,
     createWebp,
-    html,
+    htmlCopy,
     devStyles,
     scripts,
     concatJs
