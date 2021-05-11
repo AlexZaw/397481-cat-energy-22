@@ -15,6 +15,7 @@ const webp = require('gulp-webp');
 const htmlmin = require('gulp-htmlmin');
 const terser = require('gulp-terser');
 const concat = require('gulp-concat');
+const gcmq = require('gulp-group-css-media-queries');
 
 //Clean
 
@@ -105,9 +106,9 @@ const html = () => {
     .pipe(gulp.dest('build'));
 }
 
-// Styles
+// Dev styles
 
-const styles = () => {
+const devStyles = () => {
   return gulp.src('source/sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -124,7 +125,29 @@ const styles = () => {
     .pipe(gulp.dest('build/css'))
     .pipe(sync.stream());
 }
-exports.styles = styles;
+exports.devStyles = devStyles;
+
+// Production styles
+
+const prodStyles = () => {
+  return gulp.src('source/sass/style.scss')
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(gcmq())
+    .pipe(postcss([
+      postcssUrl({
+        assetsPath: '../'
+      }),
+      autoprefixer(),
+      csso()
+    ]))
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(sync.stream());
+}
+exports.prodStyles = prodStyles;
 
 // JS minify
 
@@ -174,7 +197,7 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('source/sass/**/*.scss', gulp.series(devStyles));
   gulp.watch('source/img/icons/**/*.svg', gulp.series(svgstack, reload));
   gulp.watch('source/*.html', gulp.series(html, reload));
   gulp.watch('source/js/**/*.js', gulp.series(scripts, concatJs, reload));
@@ -190,16 +213,16 @@ const build = gulp.series(
     optimizeImages,
     createWebp,
     html,
-    styles,
+    prodStyles,
     scripts,
     concatJs
   )
 );
 exports.build = build;
 
-// Production with server
+// Production test with server
 
-const prod = gulp.series(
+const prodTest = gulp.series(
   clean,
   svgstack,
   gulp.parallel(
@@ -207,7 +230,7 @@ const prod = gulp.series(
     optimizeImages,
     createWebp,
     html,
-    styles,
+    prodStyles,
     scripts,
     concatJs
   ),
@@ -216,7 +239,7 @@ const prod = gulp.series(
     watcher
   )
 );
-exports.prod = prod;
+exports.prodTest = prodTest;
 
 //Default
 
@@ -228,7 +251,7 @@ exports.default = gulp.series(
     copyImages,
     createWebp,
     html,
-    styles,
+    devStyles,
     scripts,
     concatJs
   ),
