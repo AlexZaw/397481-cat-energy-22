@@ -95,7 +95,7 @@
     line-height: 24 / 18 * 1;
     display: grid;
     grid-template-columns: repeat(3, max-content);
-    column-gap: 25px;
+    column-gap: 24px;
   }
 
   @media (min-width: 1280px) {
@@ -108,14 +108,15 @@
   --border-color-l: 90%;
   --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
   margin: 0 -20px;
-  padding-top: 23px;
-  padding-bottom: 22px;
+  padding-top: 17px;
+  padding-bottom: 19px;
   border-top: 1px solid var(--border-color);
 
   @media (min-width: 768px) {
     border: none;
     margin: auto;
-    padding: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
   }
 }
 
@@ -135,19 +136,10 @@
   @media (min-width: 768px) {
     position: relative;
 
-    &[aria-current]::after {
-      content: "";
-      height: 2px;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      bottom: -8px;
+    &[aria-current] {
       --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
-      background-color: var(--bg-basic);
-
-      @media (min-width: 1280px) {
-        bottom: -6px;
-      }
+      text-decoration: underline 2px var(--bg-basic);
+      text-underline-offset: 12px;
     }
   }
 
@@ -155,8 +147,9 @@
     @media (min-width: 1280px) {
       --basic-l: 100%;
 
-      &::after {
+      &[aria-current] {
         --bg-basic-l: 100%;
+        text-underline-offset: 11px;
       }
     }
   }
