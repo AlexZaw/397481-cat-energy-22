@@ -119,25 +119,6 @@
       margin: 0 auto;
       line-height: 22 / 20 * 1;
     }
-
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      margin-bottom: 25px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: url("../../img/stack.svg#plus");
-
-      @media (min-width: 768px) {
-        width: 60px;
-        height: 60px;
-        position: absolute;
-        top: -50%;
-      }
-    }
   }
 }
 
