@@ -108,13 +108,15 @@
   --border-color-l: 90%;
   --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
   margin: 0 -20px;
-  padding-top: 17px;
-  padding-bottom: 19px;
+  padding-top: 21px;
+  padding-bottom: 24px;
   border-top: 1px solid var(--border-color);
 
   @media (min-width: 768px) {
     border: none;
     margin: auto;
+    padding-top: 17px;
+    padding-bottom: 19px;
     padding-left: 4px;
     padding-right: 4px;
   }
