@@ -58,11 +58,36 @@
   &--more {
     @media (max-width: 767px) {
       border-bottom: 1px solid var(--border-color);
+      text-align: center;
     }
 
     @media (min-width: 768px) {
       --bg-basic-l: 100%;
       border: 2px solid var(--border-color);
+      position: relative;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-top: 6px;
+      margin-bottom: 15px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../../img/stack.svg#plus");
+
+      @media (min-width: 768px) {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 53px;
+        left: 50%;
+        margin: 0;
+        transform: translateX(-50%);
+      }
     }
   }
 }
