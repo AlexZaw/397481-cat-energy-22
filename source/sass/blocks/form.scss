@@ -76,7 +76,7 @@
   }
 
   &--owner {
-    margin-top: 12px;
+    margin-top: 14px;
     justify-items: initial;
 
     @media (min-width: 768px) {
@@ -85,7 +85,7 @@
 
     @media (min-width: 1280px) {
       grid-template-columns: 1fr 1fr;
-      column-gap: 80px;
+      column-gap: 74px;
     }
   }
 }
@@ -123,13 +123,17 @@
 .form__icon {
   position: absolute;
   right: 16px;
+
+  @media (min-width: 768px) {
+    right: 18px;
+  }
 }
 
 .form__input {
   --border-color-l: 91%;
   --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
   border: 1px solid var(--border-color);
-  margin-left: 15px;
+  margin-left: 12px;
   padding: 10px 15px;
   width: 100%;
   height: 46px;
@@ -171,6 +175,7 @@
   }
 
   @media (min-width: 768px) {
+    margin-left: 18px;
     padding: 10px 20px;
     height: 52px;
   }
@@ -283,7 +288,7 @@
   line-height: 18 / 16 * 1;
   text-transform: uppercase;
   color: var(--basic);
-  margin: 17px 0 0;
+  margin: 15px 0 0;
   padding: 10px 12px;
   width: 100%;
   height: 150px;
