@@ -14,17 +14,24 @@
 }
 
 .feedback__text {
-  --basic-l: 0%;
-  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
-  color: var(--basic);
-  font-family: var(--accent-font);
-  text-transform: uppercase;
   margin-top: 38px;
   margin-bottom: 0;
 
   @media (min-width: 768px) {
-    font-size: 20px;
-    line-height: 1.5;
     margin-top: 56px;
+  }
+
+  p {
+    --basic-l: 0%;
+    --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+    color: var(--basic);
+    font-family: var(--accent-font);
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      line-height: 1.5;
+    }
   }
 }
