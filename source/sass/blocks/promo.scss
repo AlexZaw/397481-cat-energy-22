@@ -81,9 +81,6 @@
 }
 
 .promo__slogan {
-  font-family: var(--accent-font);
-  line-height: 1;
-  text-transform: uppercase;
   margin-top: 26px;
   margin-bottom: 0;
   z-index: 1;
@@ -96,16 +93,25 @@
   @media (min-width: 1280px) {
     margin-left: 80px;
   }
+
+  p {
+    margin-top: 0;
+    font-family: var(--accent-font);
+    line-height: 1;
+    text-transform: uppercase;
+  }
 }
 
+
 .promo__image-wrapper {
-  margin-top: 30px;
+  margin-top: 16px;
+  // margin-top: 30px;
 
   @media (min-width: 768px) {
     grid-row: 3;
     grid-column: 1/-1;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   @media (min-width: 1280px) {
@@ -141,13 +147,15 @@
     grid-column: 1/-1;
     justify-self: start;
     align-self: start;
-    margin-top: 49px;
+    margin-top: 29px;
+    // margin-top: 49px;
     margin-left: 82px;
     padding: 17px;
   }
 
   @media (min-width: 1280px) {
-    margin-top: 51px;
+    // margin-top: 51px;
+    margin-top: 31px;
     margin-left: 80px;
   }
 }
