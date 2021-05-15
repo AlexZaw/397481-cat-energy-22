@@ -105,7 +105,6 @@
 
 .promo__image-wrapper {
   margin-top: 16px;
-  // margin-top: 30px;
 
   @media (min-width: 768px) {
     grid-row: 3;
@@ -148,13 +147,11 @@
     justify-self: start;
     align-self: start;
     margin-top: 29px;
-    // margin-top: 49px;
     margin-left: 82px;
     padding: 17px;
   }
 
   @media (min-width: 1280px) {
-    // margin-top: 51px;
     margin-top: 31px;
     margin-left: 80px;
   }
